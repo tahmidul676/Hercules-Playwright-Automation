@@ -2,7 +2,6 @@ exports.LoginPage = class LoginPage {
   constructor(page) {
     this.page = page;
 
-    // Login locators
     this.userMobileNumberInput = page.getByRole("textbox", {
       name: "User Mobile Number *",
     });
