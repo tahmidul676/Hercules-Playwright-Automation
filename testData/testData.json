@@ -2,15 +2,6 @@
   {
     "url": "https://dmsweb.sslwireless.com/",
     "userMobileNumberInput": "01313006789",
-    "password": "Password12",
-    "branch": "Rampura Branch",
-    "route": "Rampura Route 1",
-    "retailer": "City Store 3",
-    "orderId": [
-      "ORD-260505-236502-00003",
-      "ORD-260505-236502-00002",
-      "ORD-260505-236502-01142",
-      "ORD-260430-236502-00007"
-    ]
+    "password": "Password12"
   }
 ]
