@@ -11,6 +11,9 @@ test("Approval Pending Order Test", async ({ page }) => {
   const data = testData[0];
   await loginPage.gotoLoginPage(data.url);
   await loginPage.login(data.userMobileNumberInput, data.password);
+  await expect(page.locator(".Toastify__toast-body")).toHaveText(
+    "successfully logged in",
+  );
 
   // Dashboard Page
   const dashboardPage = new DashboardPage(page);
@@ -18,23 +21,19 @@ test("Approval Pending Order Test", async ({ page }) => {
   await dashboardPage.clickSND();
   await dashboardPage.clickOrder();
   await dashboardPage.clickApprovalPendingOrder();
+  await expect(page).toHaveURL(/\/snd\/orders\/approval-pending/);
 
+  // Order Page
   const orderPage = new OrderPage(page);
   const appPendingData = approvalPendingOrder[0];
-  // Order Page
-  //await page.waitForTimeout(5000);
+
   await orderPage.selectBranch(appPendingData.branch);
-  // await page.waitForTimeout(5000);
   await orderPage.selectRoute(appPendingData.route);
   await orderPage.selectRetailer(appPendingData.retailer);
   await orderPage.clickSubmit();
   await orderPage.clickFilter();
-  //await orderPage.scrollDown();
-  // await page.waitForTimeout(5000);
   await orderPage.selectCheckboxByOrderId(appPendingData.orderId);
-  // await page.waitForTimeout(5000);
   await orderPage.clickConfirmOrder();
   await orderPage.selectStatus(appPendingData.status);
   await orderPage.clickSubmitApprove();
-  // await page.waitForTimeout(5000);
 });

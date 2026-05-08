@@ -1,3 +1,4 @@
+const { expect } = require("@playwright/test");
 exports.PIPage = class PIPage {
   constructor(page) {
     this.page = page;
@@ -32,16 +33,25 @@ exports.PIPage = class PIPage {
 
   async selectBranch(branchName) {
     await this.branchDropdown.click();
+    await this.page.waitForSelector('[role="option"]', {
+      state: "visible",
+    });
     await this.page.getByRole("option", { name: branchName }).click();
   }
 
   async selectRoute(routeName) {
     await this.routeDropdown.click();
+    await this.page.waitForSelector('[role="option"]', {
+      state: "visible",
+    });
     await this.page.getByRole("option", { name: routeName }).click();
   }
 
   async selectRetailer(retailerName) {
     await this.retailerDropdown.click();
+    await this.page.waitForSelector('[role="option"]', {
+      state: "visible",
+    });
     await this.page.getByRole("option", { name: retailerName }).click();
   }
 
@@ -50,7 +60,7 @@ exports.PIPage = class PIPage {
   }
 
   async clickFilter() {
-     await this.filterButton.waitFor({ state: 'visible', timeout: 60000 })
+    await expect(this.filterButton).toBeVisible();
     await this.filterButton.click();
   }
 
@@ -72,7 +82,7 @@ exports.PIPage = class PIPage {
   }
 
   async clickProcessSelectedOrder() {
-    await this.processSelectedOrderBtn.waitFor({ state: 'visible', timeout: 60000 })
+    await expect(this.processSelectedOrderBtn).toBeVisible();
     await this.processSelectedOrderBtn.click();
   }
 };

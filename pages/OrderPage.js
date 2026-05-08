@@ -1,3 +1,4 @@
+const { expect } = require("@playwright/test");
 exports.OrderPage = class OrderPage {
   constructor(page) {
     this.page = page;
@@ -26,27 +27,26 @@ exports.OrderPage = class OrderPage {
     });
   }
 
-  // async selectBranch(branchName) {
-   
-  //   await this.selectBranchDropdown.click();
-  //   await this.page.getByRole("option", { name: branchName }).click();
-  // }
   async selectBranch(branchName) {
-  await this.selectBranchDropdown.click();
-  
-  // Wait for options to appear in DOM before clicking
-  await this.page.waitForSelector('[role="option"]', { state: 'visible', timeout: 15000 });
-  
-  await this.page.getByRole("option", { name: branchName }).click();
-}
+    await this.selectBranchDropdown.click();
+    await this.page.waitForSelector('[role="option"]', {
+      state: "visible",
+    });
+    await this.page.getByRole("option", { name: branchName }).click();
+  }
 
   async selectRoute(routeName) {
-   
     await this.selectRouteDropdown.click();
+    await this.page.waitForSelector('[role="option"]', {
+      state: "visible",
+    });
     await this.page.getByRole("option", { name: routeName }).click();
   }
   async selectRetailer(retailerName) {
     await this.selectRetailerDropdown.click();
+    await this.page.waitForSelector('[role="option"]', {
+      state: "visible",
+    });
     await this.page.getByRole("option", { name: retailerName }).click();
   }
 
@@ -76,17 +76,17 @@ exports.OrderPage = class OrderPage {
   }
 
   async clickConfirmOrder() {
-    await this.confirmOrderBtn.waitFor({ state: "visible", timeout: 60000 });
+    await expect(this.confirmOrderBtn).toBeVisible();
     await this.confirmOrderBtn.click();
   }
 
-
   async selectStatus(statusValue) {
+    await expect(this.statusDropdown).toBeVisible();
     await this.statusDropdown.selectOption(statusValue);
   }
 
   async clickSubmitApprove() {
-  await this.submitButtonApprove.waitFor({ state: "visible", timeout: 9000 });
-  await this.submitButton.click();
-}
+    await expect(this.submitButtonApprove).toBeVisible();
+    await this.submitButton.click();
+  }
 };
