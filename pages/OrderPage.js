@@ -87,6 +87,7 @@ exports.OrderPage = class OrderPage {
 
   async clickSubmitApprove() {
     await expect(this.submitButtonApprove).toBeVisible();
-    await this.submitButton.click();
+    await this.submitButtonApprove.click();
+
   }
 };
