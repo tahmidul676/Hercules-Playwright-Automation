@@ -2,14 +2,14 @@ import { test, expect } from "@playwright/test";
 import { LoginPage } from "../pages/LoginPage";
 import { DashboardPage } from "../pages/DashboardPage";
 import { PickingPage } from "../pages/PickingPage";
-import testData from "../testData/testData.json";
+import loginData from "../testData/loginData.json";
 import pickingTestData from "../testData/pickingTestData.json";
 import collectionSummaryTestData from "../testData/collectionSummaryTestData.json";
 
 test("TC_010_SND_PI_CollectionSummery_CreateTest", async ({ page }) => {
   // Login Page
   const loginPage = new LoginPage(page);
-  const data = testData[0];
+  const data = loginData[0];
   await loginPage.gotoLoginPage(data.url);
   await loginPage.login(data.userMobileNumberInput, data.password);
 
