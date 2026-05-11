@@ -6,6 +6,28 @@
     ]
   },
   {
+    "name": "Timeout errors",
+    "matchedStatuses": [
+      "broken"
+    ],
+    "messageRegex": ".*TimeoutError.*|.*timeout.*exceeded.*"
+  },
+  {
+    "name": "Network errors",
+    "matchedStatuses": [
+      "broken"
+    ],
+    "messageRegex": ".*net::ERR.*|.*ECONNREFUSED.*"
+  },
+  {
+    "name": "Element not found",
+    "matchedStatuses": [
+      "failed",
+      "broken"
+    ],
+    "messageRegex": ".*strict mode violation.*|.*locator.*resolved to.*|.*waiting for.*"
+  },
+  {
     "name": "Ignored tests",
     "matchedStatuses": [
       "skipped"
