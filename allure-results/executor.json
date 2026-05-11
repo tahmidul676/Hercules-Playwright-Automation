@@ -1,7 +1,7 @@
 {
   "name": "Local Machine",
-  "type": "Playwright",
+  "type": "playwright",
   "buildName": "Hercules Automation",
-  "buildOrder": 1778430946858,
-  "reportName": "Playwright Allure Report"
+  "buildOrder": 1778482845700,
+  "reportName": "Hercules Automation Report"
 }
