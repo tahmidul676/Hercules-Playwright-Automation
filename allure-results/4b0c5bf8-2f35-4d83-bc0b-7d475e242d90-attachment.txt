@@ -1,0 +1,8 @@
+🔍 Found 0 rows in tbody
+✅ Extracted 0 products successfully.
+Products: []
+Summary: {
+  grossTotal: 9920,
+  netPayable: 9920,
+  netPayableInWords: 'Nine Thousand Nine Hundred Twenty'
+}

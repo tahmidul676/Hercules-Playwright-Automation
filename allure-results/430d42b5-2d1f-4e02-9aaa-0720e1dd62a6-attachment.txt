@@ -1,0 +1,6 @@
+📋 Processing Order: ORD-260510-236502-00014
+🔄 Starting order update...
+🔍 Found 5 rows before update
+✅ Updated → SKC01 : 3
+✅ Updated → SKU00013 : 3
+✅ Updated → SKU00017 : 3

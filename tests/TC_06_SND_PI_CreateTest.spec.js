@@ -34,4 +34,7 @@ test("TC_06_SND_PI_CreateTest", async ({ page }) => {
   await createPIPage.clickFilter();
   await createPIPage.selectCheckboxByOrderId(piData.orderId);
   await createPIPage.clickProcessSelectedOrder();
+    await expect(page.locator(".Toastify__toast-body")).toHaveText(
+    "Provisional Invoices created successfully for all orders.",
+  );
 });

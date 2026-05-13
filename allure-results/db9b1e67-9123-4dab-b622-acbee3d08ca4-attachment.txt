@@ -1,0 +1,2 @@
+Dynamic Value: 10,420
+Found Value: 10,420

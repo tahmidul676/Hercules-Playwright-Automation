@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","9682","TC_06_SND_PI_CreateTest","chromium","2026-05-12","passed","2026-05-12","","TC_06_SND_PI_CreateTest.spec.js","",""
+"","15223","TC_08_SND_PI_Picking_CreateTest","chromium","2026-05-12","passed","2026-05-12","","TC_08_SND_PI_Picking_CreateTest.spec.js","",""
+"","11191","TC_05_SND_Order_ApprovalPendingOrderTest","chromium","2026-05-12","passed","2026-05-12","","TC_05_SND_Order_ApprovalPendingOrderTest.spec.js","",""
+"","13582","TC_010_SND_PI_CollectionSummery_CreateTest","chromium","2026-05-12","passed","2026-05-12","","TC_010_SND_PI_CollectionSummery_CreateTest.spec.js","",""

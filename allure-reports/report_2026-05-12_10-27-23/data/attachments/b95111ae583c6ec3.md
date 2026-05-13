@@ -1,0 +1,359 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: TC_06_SND_PI_CreateTest.spec.js >> TC_06_SND_PI_CreateTest
+- Location: tests\TC_06_SND_PI_CreateTest.spec.js:8:5
+
+# Error details
+
+```
+TimeoutError: locator.textContent: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('tbody tr').nth(7)
+
+```
+
+# Page snapshot
+
+```yaml
+- generic:
+  - generic:
+    - generic:
+      - generic:
+        - generic [ref=e1]:
+          - link "application logo" [ref=e3] [cursor=pointer]:
+            - /url: /
+            - img "application logo" [ref=e4]
+          - searchbox "Search menu items" [ref=e7]
+          - generic [ref=e8]:
+            - link "" [ref=e9] [cursor=pointer]:
+              - /url: /bulk-upload-list
+              - generic "Upload Manager" [ref=e10]: 
+            - link "" [ref=e11] [cursor=pointer]:
+              - /url: /download-manager
+              - generic "Download Manager" [ref=e12]: 
+            - generic "View In Full Screen" [ref=e13] [cursor=pointer]: 
+            - generic "Notifications" [ref=e14] [cursor=pointer]:
+              - generic [ref=e15]:
+                - text: 
+                - generic "8 unread messages" [ref=e16]: "8"
+            - img "Profile" [ref=e19] [cursor=pointer]
+        - generic [ref=e21] [cursor=pointer]:
+          - button "Open sidebar" [ref=e22]:
+            - generic [ref=e24]: 󰅂
+          - generic [ref=e25]:
+            - link "󰄫 Dashboard" [ref=e27]:
+              - /url: /
+              - generic [ref=e28]: 󰄫
+              - generic: Dashboard
+            - generic [ref=e31]: 
+            - generic [ref=e34]: 
+            - generic [ref=e37]: 
+            - generic [ref=e40]: 
+            - generic [ref=e43]: 
+            - generic [ref=e46]: 
+            - generic [ref=e49]: 
+            - generic [ref=e52]: 
+            - generic [ref=e55]: 
+        - generic [ref=e57]:
+          - generic [ref=e58]:
+            - generic [ref=e59]:
+              - heading "Create Proforma Invoice" [level=1]
+              - list [ref=e60]:
+                - listitem [ref=e61]:
+                  - link "Dashboard" [ref=e62] [cursor=pointer]:
+                    - /url: /
+                - listitem [ref=e63]: /
+                - listitem: Create Proforma Invoice
+            - button "Filter" [active] [ref=e66] [cursor=pointer]:
+              - generic [ref=e67]: 
+              - text: Filter
+          - option "Select Business Unit" [selected]
+          - option "CBU of Consumer Healthcare"
+          - option "Chief Business Officer-Pediatrics"
+          - option "Head of Business"
+          - combobox [ref=e70]
+          - combobox [ref=e72]
+          - combobox [ref=e74]
+          - combobox [ref=e76]
+          - combobox [ref=e78]
+          - generic [ref=e79]:
+            - generic [ref=e81]:
+              - heading "Order List" [level=5] [ref=e82]
+              - paragraph
+            - generic [ref=e84]:
+              - table [ref=e86]:
+                - rowgroup [ref=e87]:
+                  - row "SL Retailer Code Retailer Name Mobile Number Order Number Date Time TP Amount VAT Amount Discount Amount Net TP Amount Net Amount Created By Order Status Action" [ref=e88]:
+                    - columnheader "SL" [ref=e89]
+                    - columnheader "Retailer Code" [ref=e90]
+                    - columnheader "Retailer Name" [ref=e91]
+                    - columnheader "Mobile Number" [ref=e92]
+                    - columnheader "Order Number" [ref=e93]
+                    - columnheader "Date" [ref=e94]
+                    - columnheader "Time" [ref=e95]
+                    - columnheader "TP Amount" [ref=e96]
+                    - columnheader "VAT Amount" [ref=e97]
+                    - columnheader "Discount Amount" [ref=e98]
+                    - columnheader "Net TP Amount" [ref=e99]
+                    - columnheader "Net Amount" [ref=e100]
+                    - columnheader "Created By" [ref=e101]
+                    - columnheader "Order Status" [ref=e102]
+                    - columnheader "Action" [ref=e103]
+                - rowgroup [ref=e104]:
+                  - row "R00236507 City Store 3 8801670000725 ORD-260505-236502-00003 2026-05-05 15:16 PM 10,022.50 - - 10,022.50 10,022.50 MPO 06 Pending Create PI" [ref=e105]:
+                    - cell [ref=e106]:
+                      - checkbox [ref=e107]
+                    - cell "R00236507" [ref=e108]
+                    - cell "City Store 3" [ref=e109]
+                    - cell "8801670000725" [ref=e110]
+                    - cell "ORD-260505-236502-00003" [ref=e111]
+                    - cell "2026-05-05" [ref=e112]
+                    - cell "15:16 PM" [ref=e113]
+                    - cell "10,022.50" [ref=e114]
+                    - cell "-" [ref=e115]
+                    - cell "-" [ref=e116]
+                    - cell "10,022.50" [ref=e117]
+                    - cell "10,022.50" [ref=e118]
+                    - cell "MPO 06" [ref=e119]
+                    - cell "Pending" [ref=e120]:
+                      - generic [ref=e121]: Pending
+                    - cell "Create PI" [ref=e122]:
+                      - button "Create PI" [ref=e124] [cursor=pointer]:
+                        - generic [ref=e125]: 
+                  - row "R00236507 City Store 3 8801670000725 ORD-260505-236502-00002 2026-05-05 15:07 PM 10,022.50 - - 10,022.50 10,022.50 MPO 06 Pending Create PI" [ref=e126]:
+                    - cell [ref=e127]:
+                      - checkbox [ref=e128]
+                    - cell "R00236507" [ref=e129]
+                    - cell "City Store 3" [ref=e130]
+                    - cell "8801670000725" [ref=e131]
+                    - cell "ORD-260505-236502-00002" [ref=e132]
+                    - cell "2026-05-05" [ref=e133]
+                    - cell "15:07 PM" [ref=e134]
+                    - cell "10,022.50" [ref=e135]
+                    - cell "-" [ref=e136]
+                    - cell "-" [ref=e137]
+                    - cell "10,022.50" [ref=e138]
+                    - cell "10,022.50" [ref=e139]
+                    - cell "MPO 06" [ref=e140]
+                    - cell "Pending" [ref=e141]:
+                      - generic [ref=e142]: Pending
+                    - cell "Create PI" [ref=e143]:
+                      - button "Create PI" [ref=e145] [cursor=pointer]:
+                        - generic [ref=e146]: 
+                  - row "- R00236507 City Store 3 8801670000725 ORD-260426-236502-00012 2026-04-26 17:05 PM 32,770 1,064.75 - 32,770 33,834.75 MPO 06 Partial PI Create PI" [ref=e147]:
+                    - cell "-" [ref=e148]
+                    - cell "R00236507" [ref=e149]
+                    - cell "City Store 3" [ref=e150]
+                    - cell "8801670000725" [ref=e151]
+                    - cell "ORD-260426-236502-00012" [ref=e152]
+                    - cell "2026-04-26" [ref=e153]
+                    - cell "17:05 PM" [ref=e154]
+                    - cell "32,770" [ref=e155]
+                    - cell "1,064.75" [ref=e156]
+                    - cell "-" [ref=e157]
+                    - cell "32,770" [ref=e158]
+                    - cell "33,834.75" [ref=e159]
+                    - cell "MPO 06" [ref=e160]
+                    - cell "Partial PI" [ref=e161]:
+                      - generic [ref=e162]: Partial PI
+                    - cell "Create PI" [ref=e163]:
+                      - button "Create PI" [ref=e165] [cursor=pointer]:
+                        - generic [ref=e166]: 
+                  - row "- R00236507 City Store 3 8801670000725 ORD-260426-236502-00011 2026-04-26 17:04 PM 43,000 550.75 - 43,000 43,550.75 MPO 06 Partial PI Create PI" [ref=e167]:
+                    - cell "-" [ref=e168]
+                    - cell "R00236507" [ref=e169]
+                    - cell "City Store 3" [ref=e170]
+                    - cell "8801670000725" [ref=e171]
+                    - cell "ORD-260426-236502-00011" [ref=e172]
+                    - cell "2026-04-26" [ref=e173]
+                    - cell "17:04 PM" [ref=e174]
+                    - cell "43,000" [ref=e175]
+                    - cell "550.75" [ref=e176]
+                    - cell "-" [ref=e177]
+                    - cell "43,000" [ref=e178]
+                    - cell "43,550.75" [ref=e179]
+                    - cell "MPO 06" [ref=e180]
+                    - cell "Partial PI" [ref=e181]:
+                      - generic [ref=e182]: Partial PI
+                    - cell "Create PI" [ref=e183]:
+                      - button "Create PI" [ref=e185] [cursor=pointer]:
+                        - generic [ref=e186]: 
+                  - row "- R00236507 City Store 3 8801670000725 ORD-260426-236502-00010 2026-04-26 17:02 PM 23,465 315 - 23,465 23,780 MPO 06 Partial PI Create PI" [ref=e187]:
+                    - cell "-" [ref=e188]
+                    - cell "R00236507" [ref=e189]
+                    - cell "City Store 3" [ref=e190]
+                    - cell "8801670000725" [ref=e191]
+                    - cell "ORD-260426-236502-00010" [ref=e192]
+                    - cell "2026-04-26" [ref=e193]
+                    - cell "17:02 PM" [ref=e194]
+                    - cell "23,465" [ref=e195]
+                    - cell "315" [ref=e196]
+                    - cell "-" [ref=e197]
+                    - cell "23,465" [ref=e198]
+                    - cell "23,780" [ref=e199]
+                    - cell "MPO 06" [ref=e200]
+                    - cell "Partial PI" [ref=e201]:
+                      - generic [ref=e202]: Partial PI
+                    - cell "Create PI" [ref=e203]:
+                      - button "Create PI" [ref=e205] [cursor=pointer]:
+                        - generic [ref=e206]: 
+                  - row "R00236507 City Store 3 8801670000725 ORD-260420-236502-00011 2026-04-20 16:51 PM 900 45 - 900 945 MPO 06 Pending Create PI" [ref=e207]:
+                    - cell [ref=e208]:
+                      - checkbox [ref=e209]
+                    - cell "R00236507" [ref=e210]
+                    - cell "City Store 3" [ref=e211]
+                    - cell "8801670000725" [ref=e212]
+                    - cell "ORD-260420-236502-00011" [ref=e213]
+                    - cell "2026-04-20" [ref=e214]
+                    - cell "16:51 PM" [ref=e215]
+                    - cell "900" [ref=e216]
+                    - cell "45" [ref=e217]
+                    - cell "-" [ref=e218]
+                    - cell "900" [ref=e219]
+                    - cell "945" [ref=e220]
+                    - cell "MPO 06" [ref=e221]
+                    - cell "Pending" [ref=e222]:
+                      - generic [ref=e223]: Pending
+                    - cell "Create PI" [ref=e224]:
+                      - button "Create PI" [ref=e226] [cursor=pointer]:
+                        - generic [ref=e227]: 
+                  - row "R00236508 Abcd Store 7 8801670000726 ORD-260420-236502-00006 2026-04-20 15:53 PM 1,500 75 - 1,500 1,575 MPO 06 Pending Create PI" [ref=e228]:
+                    - cell [ref=e229]:
+                      - checkbox [ref=e230]
+                    - cell "R00236508" [ref=e231]
+                    - cell "Abcd Store 7" [ref=e232]
+                    - cell "8801670000726" [ref=e233]
+                    - cell "ORD-260420-236502-00006" [ref=e234]
+                    - cell "2026-04-20" [ref=e235]
+                    - cell "15:53 PM" [ref=e236]
+                    - cell "1,500" [ref=e237]
+                    - cell "75" [ref=e238]
+                    - cell "-" [ref=e239]
+                    - cell "1,500" [ref=e240]
+                    - cell "1,575" [ref=e241]
+                    - cell "MPO 06" [ref=e242]
+                    - cell "Pending" [ref=e243]:
+                      - generic [ref=e244]: Pending
+                    - cell "Create PI" [ref=e245]:
+                      - button "Create PI" [ref=e247] [cursor=pointer]:
+                        - generic [ref=e248]: 
+              - generic [ref=e249]:
+                - combobox [ref=e252] [cursor=pointer]:
+                  - option "10 / page" [selected]
+                  - option "20 / page"
+                  - option "50 / page"
+                  - option "100 / page"
+                - navigation "Page navigation example" [ref=e253]:
+                  - list [ref=e254]:
+                    - listitem [ref=e255]:
+                      - button "<<"
+                    - listitem "You are on the first page" [ref=e256]:
+                      - button "<" [disabled]
+                    - listitem [ref=e257]:
+                      - button "1" [disabled] [ref=e258]
+                    - listitem "You are on the last page" [ref=e259]:
+                      - button ">" [disabled]
+                    - listitem [ref=e260]:
+                      - button ">>" [disabled]
+```
+
+# Test source
+
+```ts
+  1  | const { expect } = require("@playwright/test");
+  2  | exports.PIPage = class PIPage {
+  3  |   constructor(page) {
+  4  |     this.page = page;
+  5  | 
+  6  |     this.selectDropdown = page.locator("span").nth(2);
+  7  |     this.branchDropdown = page
+  8  |       .locator("div")
+  9  |       .filter({ hasText: /^Select Branch$/ })
+  10 |       .nth(1);
+  11 |     this.routeDropdown = page
+  12 |       .locator("div")
+  13 |       .filter({ hasText: /^Select Route$/ })
+  14 |       .nth(1);
+  15 |     this.retailerDropdown = page
+  16 |       .locator("div")
+  17 |       .filter({ hasText: /^Select Retailer$/ })
+  18 |       .nth(1);
+  19 |     this.submitButton = page.getByRole("button", { name: "Submit" });
+  20 |     this.filterButton = page.getByRole("button", {
+  21 |       name: "Filter",
+  22 |       exact: true,
+  23 |     });
+  24 | 
+  25 |     this.processSelectedOrderBtn = page.getByRole("button", {
+  26 |       name: "Process Selected Orders",
+  27 |     });
+  28 |   }
+  29 | 
+  30 |   async clickSelectDropdown() {
+  31 |     await this.selectDropdown.click();
+  32 |   }
+  33 | 
+  34 |   async selectBranch(branchName) {
+  35 |     await this.branchDropdown.click();
+  36 |     await this.page.waitForSelector('[role="option"]', {
+  37 |       state: "visible",
+  38 |     });
+  39 |     await this.page.getByRole("option", { name: branchName }).click();
+  40 |   }
+  41 | 
+  42 |   async selectRoute(routeName) {
+  43 |     await this.routeDropdown.click();
+  44 |     await this.page.waitForSelector('[role="option"]', {
+  45 |       state: "visible",
+  46 |     });
+  47 |     await this.page.getByRole("option", { name: routeName }).click();
+  48 |   }
+  49 | 
+  50 |   async selectRetailer(retailerName) {
+  51 |     await this.retailerDropdown.click();
+  52 |     await this.page.waitForSelector('[role="option"]', {
+  53 |       state: "visible",
+  54 |     });
+  55 |     await this.page.getByRole("option", { name: retailerName }).click();
+  56 |   }
+  57 | 
+  58 |   async clickSubmit() {
+  59 |     await this.submitButton.click();
+  60 |   }
+  61 | 
+  62 |   async clickFilter() {
+  63 |     await expect(this.filterButton).toBeVisible();
+  64 |     await this.filterButton.click();
+  65 |   }
+  66 | 
+  67 |   async selectCheckboxByOrderId(orderId) {
+  68 |     const rows = this.page.locator("tbody tr");
+  69 | 
+  70 |     for (let i = 0; i < (await rows.count()); i++) {
+  71 |       const row = rows.nth(i);
+> 72 |       const text = await row.textContent();
+     |                              ^ TimeoutError: locator.textContent: Timeout 30000ms exceeded.
+  73 | 
+  74 |       if (orderId.some((id) => text.includes(id))) {
+  75 |         const checkbox = row.locator('input[type="checkbox"]');
+  76 | 
+  77 |         if (!(await checkbox.isChecked())) {
+  78 |           await checkbox.check();
+  79 |         }
+  80 |       }
+  81 |     }
+  82 |   }
+  83 | 
+  84 |   async clickProcessSelectedOrder() {
+  85 |     await expect(this.processSelectedOrderBtn).toBeVisible();
+  86 |     await this.processSelectedOrderBtn.click();
+  87 |   }
+  88 | };
+  89 | 
+```

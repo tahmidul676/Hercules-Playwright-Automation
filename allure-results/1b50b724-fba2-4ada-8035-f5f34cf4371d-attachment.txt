@@ -1,0 +1,15 @@
+📋 Processing Order: ORD-260510-236502-00014
+🔄 Starting order update...
+🔍 Found 3 rows before update
+✅ Updated → SKC01 : 1
+✅ Updated → SKU00013 : 1
+✅ Updated → SKU00017 : 1
+✅ Adjustment: 250
+✅ Gross Discount: 150
+✅ Clicked Update Button
+📊 Extracting table data...
+🔍 Total rows found: 3
+🎯 Final Extracted Products: 0
+✅ Final Table Data: { products: [], summary: { netPayable: 0 }, totalItems: 0 }
+Products: []
+Count: 0

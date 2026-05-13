@@ -1,0 +1,6 @@
+Products: []
+Summary: {
+  grossTotal: 10420,
+  netPayable: 10420,
+  netPayableInWords: 'Ten Thousand Four Hundred Twenty'
+}

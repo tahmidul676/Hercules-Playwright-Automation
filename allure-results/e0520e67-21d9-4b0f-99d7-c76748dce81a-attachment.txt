@@ -1,0 +1,1 @@
+Items selected: locator('p.mb-0').filter({ hasText: /\d+\s+items?\s+selected/ })
