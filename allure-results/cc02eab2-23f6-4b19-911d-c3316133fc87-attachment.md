@@ -1,0 +1,436 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: TC_05_SND_Order_ApprovalPendingOrderViewTableInfoTest.spec.js >> TC_05_SND_Order_ApprovalPendingOrderTest
+- Location: tests\TC_05_SND_Order_ApprovalPendingOrderViewTableInfoTest.spec.js:8:5
+
+# Error details
+
+```
+Error: locator.scrollIntoViewIfNeeded: Element is not attached to the DOM
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active]:
+  - generic:
+    - generic:
+      - generic:
+        - generic [ref=e1]:
+          - link "application logo" [ref=e3] [cursor=pointer]:
+            - /url: /
+            - img "application logo" [ref=e4]
+          - searchbox "Search menu items" [ref=e7]
+          - generic [ref=e8]:
+            - link "" [ref=e9] [cursor=pointer]:
+              - /url: /bulk-upload-list
+              - generic "Upload Manager" [ref=e10]: 
+            - link "" [ref=e11] [cursor=pointer]:
+              - /url: /download-manager
+              - generic "Download Manager" [ref=e12]: 
+            - generic "View In Full Screen" [ref=e13] [cursor=pointer]: 
+            - generic "Notifications" [ref=e14] [cursor=pointer]:
+              - generic [ref=e15]:
+                - text: 
+                - generic "8 unread messages" [ref=e16]: "8"
+            - img "Profile" [ref=e19] [cursor=pointer]
+        - generic [ref=e21] [cursor=pointer]:
+          - button "Open sidebar" [ref=e22]:
+            - generic [ref=e24]: 󰅂
+          - generic [ref=e25]:
+            - link "󰄫 Dashboard" [ref=e27]:
+              - /url: /
+              - generic [ref=e28]: 󰄫
+              - generic: Dashboard
+            - generic [ref=e31]: 
+            - generic [ref=e34]: 
+            - generic [ref=e37]: 
+            - generic [ref=e40]: 
+            - generic [ref=e43]: 
+            - generic [ref=e46]: 
+            - generic [ref=e49]: 
+            - generic [ref=e52]: 
+            - generic [ref=e55]: 
+        - generic [ref=e57]:
+          - generic [ref=e58]:
+            - generic [ref=e59]:
+              - heading "Order Details" [level=1]
+              - list [ref=e60]:
+                - listitem [ref=e61]:
+                  - link "Dashboard" [ref=e62] [cursor=pointer]:
+                    - /url: /
+                - listitem [ref=e63]: /
+                - listitem: Order Details
+            - link "List" [ref=e64] [cursor=pointer]:
+              - /url: /snd/orders/approval-pending?from=2026-05-06&to=2026-05-13&warehouse_id=400&route_id=3611&retailer_id=236507&retailer_name=City+Store+3
+              - button "List" [ref=e66]:
+                - generic [ref=e67]: 
+                - text: List
+          - generic [ref=e73]:
+            - generic [ref=e75]:
+              - generic [ref=e77]: "1"
+              - generic "Order" [ref=e79]
+            - generic [ref=e80]:
+              - generic [ref=e82]: "2"
+              - generic "Proforma" [ref=e84]
+            - generic [ref=e85]:
+              - generic [ref=e87]: "3"
+              - generic "Picking" [ref=e89]
+            - generic [ref=e90]:
+              - generic [ref=e92]: "4"
+              - generic "Collection Summary" [ref=e94]
+            - generic [ref=e95]:
+              - generic [ref=e97]: "5"
+              - generic "Delivery" [ref=e99]
+            - generic [ref=e100]:
+              - generic [ref=e102]: "6"
+              - generic "Collection Posting" [ref=e104]
+          - generic [ref=e107]:
+            - generic [ref=e108]:
+              - heading "Sold To" [level=6] [ref=e109]
+              - paragraph [ref=e110]:
+                - strong [ref=e111]: R00236507
+                - text: City Store 3
+              - paragraph [ref=e112]:
+                - generic [ref=e113]: 
+                - text: "-"
+              - paragraph [ref=e114]:
+                - generic [ref=e115]: 
+                - text: "8801670000725"
+            - generic [ref=e116]:
+              - heading "Order Information" [level=6] [ref=e117]
+              - paragraph [ref=e118]:
+                - strong [ref=e119]: "Branch:"
+                - text: Rampura Branch
+              - paragraph [ref=e120]:
+                - strong [ref=e121]: "Route:"
+                - text: Rampura Route 1
+              - paragraph [ref=e122]:
+                - strong [ref=e123]: "Market:"
+                - text: Rampura Market 1
+              - paragraph [ref=e124]:
+                - strong [ref=e125]: "Sub Market:"
+                - text: Rampura Submarket 1
+            - generic [ref=e126]:
+              - heading "Order Details" [level=6] [ref=e127]
+              - paragraph [ref=e128]:
+                - strong [ref=e129]: "Order ID:"
+                - text: ORD-260510-236502-00013
+              - paragraph [ref=e130]:
+                - strong [ref=e131]: "Status:"
+                - generic [ref=e132]: Pending
+              - paragraph [ref=e133]:
+                - strong [ref=e134]: "Distributor:"
+                - text: Territory Manager - Pediatrics
+              - paragraph [ref=e135]:
+                - strong [ref=e136]: "Order Date:"
+                - text: 10-05-2026
+              - paragraph [ref=e137]:
+                - strong [ref=e138]: "Expected Delivery:"
+                - text: 10-05-2026
+          - table [ref=e141]:
+            - rowgroup [ref=e142]:
+              - row "Code Description Quantity Per Pack Total Discount Net TP Net Value" [ref=e143]:
+                - columnheader "Code" [ref=e144]
+                - columnheader "Description" [ref=e145]
+                - columnheader "Quantity" [ref=e146]
+                - columnheader "Per Pack" [ref=e147]
+                - columnheader "Total" [ref=e148]
+                - columnheader "Discount" [ref=e149]
+                - columnheader "Net TP" [ref=e150]
+                - columnheader "Net Value" [ref=e151]
+              - row "TP VAT (%) TP VAT % Amount" [ref=e152]:
+                - columnheader "TP" [ref=e153]
+                - columnheader "VAT (%)" [ref=e154]
+                - columnheader "TP" [ref=e155]
+                - columnheader "VAT" [ref=e156]
+                - columnheader "%" [ref=e157]
+                - columnheader "Amount" [ref=e158]
+            - rowgroup [ref=e159]:
+              - row "SKC01 Electrolyte Sports Drinks Orange 3 300 - 900 - - - 900 900" [ref=e160]:
+                - cell "SKC01" [ref=e161]
+                - cell "Electrolyte Sports Drinks Orange" [ref=e162]:
+                  - generic [ref=e163]: Electrolyte Sports Drinks Orange
+                - cell "3" [ref=e164]
+                - cell "300" [ref=e165]
+                - cell "-" [ref=e166]
+                - cell "900" [ref=e167]
+                - cell "-" [ref=e168]
+                - cell "-" [ref=e169]
+                - cell "-" [ref=e170]
+                - cell "900" [ref=e171]
+                - cell "900" [ref=e172]
+              - row "SKU00013 Esonaaf 20 mg Capsule 3 100 - 300 - - - 300 300" [ref=e173]:
+                - cell "SKU00013" [ref=e174]
+                - cell "Esonaaf 20 mg Capsule" [ref=e175]:
+                  - generic [ref=e176]: Esonaaf 20 mg Capsule
+                - cell "3" [ref=e177]
+                - cell "100" [ref=e178]
+                - cell "-" [ref=e179]
+                - cell "300" [ref=e180]
+                - cell "-" [ref=e181]
+                - cell "-" [ref=e182]
+                - cell "-" [ref=e183]
+                - cell "300" [ref=e184]
+                - cell "300" [ref=e185]
+              - row "SKU00017 Mancer 75 WP 3 430 - 1,290 - - - 1,290 1,290" [ref=e186]:
+                - cell "SKU00017" [ref=e187]
+                - cell "Mancer 75 WP" [ref=e188]:
+                  - generic [ref=e189]: Mancer 75 WP
+                - cell "3" [ref=e190]
+                - cell "430" [ref=e191]
+                - cell "-" [ref=e192]
+                - cell "1,290" [ref=e193]
+                - cell "-" [ref=e194]
+                - cell "-" [ref=e195]
+                - cell "-" [ref=e196]
+                - cell "1,290" [ref=e197]
+                - cell "1,290" [ref=e198]
+            - rowgroup [ref=e199]:
+              - 'row "Gross Total: 2,490 - - - 2,490 2,490" [ref=e200]':
+                - cell "Gross Total:" [ref=e201]
+                - cell "2,490" [ref=e202]
+                - cell "-" [ref=e203]
+                - cell "-" [ref=e204]
+                - cell "-" [ref=e205]
+                - cell "2,490" [ref=e206]
+                - cell "2,490" [ref=e207]
+              - 'row "TP + VAT: 2,490 Adjustment(+/-): 50" [ref=e208]':
+                - cell "TP + VAT:" [ref=e209]
+                - cell "2,490" [ref=e210]
+                - cell "Adjustment(+/-):" [ref=e211]
+                - cell "50" [ref=e212]
+              - 'row "Gross Discount: -" [ref=e213]':
+                - cell [ref=e214]
+                - cell "Gross Discount:" [ref=e215]
+                - cell "-" [ref=e216]
+              - 'row "Net Payable(BDT): Two Thousand Five Hundred Forty 2,540" [ref=e217]':
+                - cell "Net Payable(BDT):" [ref=e218]
+                - cell "Two Thousand Five Hundred Forty" [ref=e219]
+                - cell "2,540" [ref=e220]
+      - generic [ref=e222] [cursor=pointer]:
+        - generic [ref=e223]:
+          - img [ref=e225]
+          - generic [ref=e227]: successfully logged in
+        - button "close" [ref=e228]:
+          - img [ref=e229]
+        - generic [ref=e231]:
+          - progressbar "notification timer"
+```
+
+# Test source
+
+```ts
+  191 |         rowData[header] = value;
+  192 |       }
+  193 | 
+  194 |       data.push(rowData);
+  195 |     }
+  196 |   }
+  197 | 
+  198 |   return data;
+  199 | }
+  200 | 
+  201 | 
+  202 | 
+  203 | /**
+  204 |  * Extracts complete product table data + summary from the order view page
+  205 |  */
+  206 | /*
+  207 | async getFullProductTableData() {
+  208 |   const scrollContainer = this.page.locator(".table-responsive.report-table");
+  209 | 
+  210 |   // Ensure table is visible and scrolled
+  211 |   await scrollContainer.scrollIntoViewIfNeeded();
+  212 |   await scrollContainer.evaluate((el) => el.scrollTop = 0);
+  213 |   
+  214 |   // Wait for table to be fully loaded
+  215 |   await this.page.waitForSelector("#wrapper-content tbody tr", { 
+  216 |     state: 'attached', 
+  217 |     timeout: 15000 
+  218 |   });
+  219 | 
+  220 |   await this.page.waitForTimeout(1500);
+  221 | 
+  222 |   // === Debug: Count rows ===
+  223 |   const rowCount = await this.page.locator("#wrapper-content tbody tr").count();
+  224 |   console.log(`🔍 Found ${rowCount} rows in tbody`);
+  225 | 
+  226 |   const products = [];
+  227 | 
+  228 |   for (let i = 0; i < rowCount; i++) {
+  229 |     const row = this.page.locator("#wrapper-content tbody tr").nth(i);
+  230 |     await row.scrollIntoViewIfNeeded();
+  231 |     await this.page.waitForTimeout(300);
+  232 | 
+  233 |     products.push({
+  234 |       code: (await row.locator("td:nth-child(1)").textContent()).trim(),
+  235 | 
+  236 |       description: await row.locator("td:nth-child(2)").textContent().then(text => 
+  237 |         text.trim().replace(/\s+/g, ' ')
+  238 |       ),
+  239 | 
+  240 |       quantity: parseInt((await row.locator("td:nth-child(3)").textContent()).trim()) || 0,
+  241 | 
+  242 |       perPackTP: parseFloat((await row.locator("td:nth-child(4)").textContent()).trim().replace(/,/g, "")) || 0,
+  243 |       perPackVAT: (await row.locator("td:nth-child(5)").textContent()).trim(),
+  244 | 
+  245 |       totalTP: parseFloat((await row.locator("td:nth-child(6)").textContent()).trim().replace(/,/g, "")) || 0,
+  246 |       totalVAT: parseFloat((await row.locator("td:nth-child(7)").textContent()).trim().replace(/,/g, "")) || 0,
+  247 | 
+  248 |       discountPercent: (await row.locator("td:nth-child(8)").textContent()).trim(),
+  249 |       discountAmount: parseFloat((await row.locator("td:nth-child(9)").textContent()).trim().replace(/,/g, "")) || 0,
+  250 | 
+  251 |       netTP: parseFloat((await row.locator("td:nth-child(10)").textContent()).trim().replace(/,/g, "")) || 0,
+  252 |       netValue: parseFloat((await row.locator("td:nth-child(11)").textContent()).trim().replace(/,/g, "")) || 0,
+  253 |     });
+  254 |   }
+  255 | 
+  256 |   // ==================== FOOTER ====================
+  257 |   const lastRow = this.page.locator("tfoot tr:last-child");
+  258 | 
+  259 |   const [grossTotalText, netPayableInWords, netPayableAmountText] = await Promise.all([
+  260 |     this.page.locator("tfoot tr:first-child td:nth-child(6)").textContent(),
+  261 |     lastRow.locator("td[colspan='5']:nth-of-type(2)").textContent(),   // Fixed nth-of-type
+  262 |     lastRow.locator("td:last-child").textContent(),
+  263 |   ]);
+  264 | 
+  265 |   const summary = {
+  266 |     grossTotal: parseFloat(grossTotalText?.trim().replace(/,/g, "")) || 0,
+  267 |     netPayable: parseFloat(netPayableAmountText?.trim().replace(/,/g, "")) || 0,
+  268 |     netPayableInWords: netPayableInWords?.trim() || "",
+  269 |   };
+  270 | 
+  271 |   console.log(`✅ Extracted ${products.length} products successfully.`);
+  272 | 
+  273 |   return {
+  274 |     products,
+  275 |     summary,
+  276 |     totalItems: products.length,
+  277 |   };
+  278 | }
+  279 | 
+  280 | */
+  281 | 
+  282 | //---------------Another-------------
+  283 | 
+  284 | async getFullProductTableData() {
+  285 |   // ── 1. Wait for the scroll container to exist in DOM first ──────────────
+  286 |   const scrollContainer = this.page.locator(".table-responsive.report-table");
+  287 |   await scrollContainer.waitFor({ state: "attached", timeout: 15000 });
+  288 |   await scrollContainer.waitFor({ state: "visible", timeout: 15000 });
+  289 | 
+  290 |   // ── 2. Scroll it into view only after confirming it's attached ───────────
+> 291 |   await scrollContainer.scrollIntoViewIfNeeded();
+      |                         ^ Error: locator.scrollIntoViewIfNeeded: Element is not attached to the DOM
+  292 |   await scrollContainer.evaluate((el) => (el.scrollTop = 0));
+  293 | 
+  294 |   // ── 3. Wait for rows ─────────────────────────────────────────────────────
+  295 |   await this.page.waitForSelector("#wrapper-content tbody tr", {
+  296 |     state: "attached",
+  297 |     timeout: 15000,
+  298 |   });
+  299 | 
+  300 |   // Give React/Angular/dynamic tables a moment to fully render all rows
+  301 |   await this.page.waitForFunction(() => {
+  302 |     const rows = document.querySelectorAll("#wrapper-content tbody tr");
+  303 |     return rows.length > 0 && rows[0].querySelectorAll("td").length >= 11;
+  304 |   }, { timeout: 10000 });
+  305 | 
+  306 |   // ── 4. Count rows ────────────────────────────────────────────────────────
+  307 |   const rowCount = await this.page
+  308 |     .locator("#wrapper-content tbody tr")
+  309 |     .count();
+  310 |   console.log(`🔍 Found ${rowCount} rows in tbody`);
+  311 | 
+  312 |   // ── 5. Extract rows – re-query each row to avoid stale handles ───────────
+  313 |   const products = [];
+  314 |   for (let i = 0; i < rowCount; i++) {
+  315 |     // Re-locate on every iteration so we never hold a stale reference
+  316 |     const row = this.page.locator("#wrapper-content tbody tr").nth(i);
+  317 | 
+  318 |     await row.waitFor({ state: "visible", timeout: 5000 });
+  319 |     await row.scrollIntoViewIfNeeded();
+  320 | 
+  321 |     const cells = await row.locator("td").allTextContents();
+  322 | 
+  323 |     // Guard against ghost/empty rows (e.g. loading placeholders)
+  324 |     if (cells.length < 11) {
+  325 |       console.warn(`⚠️  Row ${i} has only ${cells.length} cells – skipping`);
+  326 |       continue;
+  327 |     }
+  328 | 
+  329 |     const clean = (idx) => cells[idx]?.trim() ?? "";
+  330 |     const toFloat = (idx) =>
+  331 |       parseFloat(clean(idx).replace(/,/g, "")) || 0;
+  332 |     const toInt = (idx) => parseInt(clean(idx)) || 0;
+  333 | 
+  334 |     products.push({
+  335 |       code:            clean(0),
+  336 |       description:     clean(1).replace(/\s+/g, " "),
+  337 |       quantity:        toInt(2),
+  338 |       perPackTP:       toFloat(3),
+  339 |       perPackVAT:      clean(4),
+  340 |       totalTP:         toFloat(5),
+  341 |       totalVAT:        toFloat(6),
+  342 |       discountPercent: clean(7),
+  343 |       discountAmount:  toFloat(8),
+  344 |       netTP:           toFloat(9),
+  345 |       netValue:        toFloat(10),
+  346 |     });
+  347 |   }
+  348 | 
+  349 |   // ── 6. Footer ─────────────────────────────────────────────────────────────
+  350 |   const grossTotalText = await this.page
+  351 |     .locator("tfoot tr:first-child td:nth-child(6)")
+  352 |     .textContent();
+  353 | 
+  354 |   const lastRow = this.page.locator("tfoot tr:last-child");
+  355 | 
+  356 |   // Use a more robust selector than nth-of-type for the words cell
+  357 |   const netPayableInWords = await lastRow
+  358 |     .locator("td[colspan='5']")
+  359 |     .last()
+  360 |     .textContent();
+  361 | 
+  362 |   const netPayableAmountText = await lastRow
+  363 |     .locator("td:last-child")
+  364 |     .textContent();
+  365 | 
+  366 |   const summary = {
+  367 |     grossTotal:        parseFloat(grossTotalText?.trim().replace(/,/g, "")) || 0,
+  368 |     netPayable:        parseFloat(netPayableAmountText?.trim().replace(/,/g, "")) || 0,
+  369 |     netPayableInWords: netPayableInWords?.trim() ?? "",
+  370 |   };
+  371 | 
+  372 |   console.log(`✅ Extracted ${products.length} products successfully.`);
+  373 |   return { products, summary, totalItems: products.length };
+  374 | }
+  375 | 
+  376 | //---------------------------------------
+  377 | // Update click
+  378 | async selectCheckboxByOrderIdUpdateClick(orderId) {
+  379 |     const rows = this.page.locator("tbody tr");
+  380 | 
+  381 |     for (let i = 0; i < (await rows.count()); i++) {
+  382 |       const row = rows.nth(i);
+  383 |       const text = await row.textContent();
+  384 | 
+  385 |       if (orderId.some((id) => text.includes(id))) {
+  386 |         const checkbox = row.locator('input[type="checkbox"]');
+  387 |         const viewButton = row.locator("button[aria-label='Update Order']");
+  388 | 
+  389 |         if (!(await checkbox.isChecked())) {
+  390 |           await checkbox.check();
+  391 |           await viewButton.click();
+```

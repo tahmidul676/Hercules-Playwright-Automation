@@ -1,0 +1,8 @@
+📋 Processing Order: ORD-260510-236502-00014
+🔄 Starting order update...
+🔍 Found 5 rows before update
+✅ Updated → SKC01 : 2
+✅ Updated → SKU00013 : 2
+✅ Updated → SKU00017 : 2
+✅ Adjustment: 250
+✅ Gross Discount: 150

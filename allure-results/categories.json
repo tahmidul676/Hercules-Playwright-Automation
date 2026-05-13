@@ -1,36 +1,127 @@
 [
   {
-    "name": "Product defects",
+    "name": "Assertion failure",
     "matchedStatuses": [
       "failed"
-    ]
+    ],
+    "messageRegex": ".*AssertionError.*|.*expect.*received.*|.*toBe.*|.*toEqual.*"
   },
   {
-    "name": "Timeout errors",
+    "name": "Text mismatch",
+    "matchedStatuses": [
+      "failed"
+    ],
+    "messageRegex": ".*toHaveText.*|.*toContainText.*|.*innerHTML.*"
+  },
+  {
+    "name": "URL mismatch",
+    "matchedStatuses": [
+      "failed"
+    ],
+    "messageRegex": ".*toHaveURL.*|.*toContain.*url.*"
+  },
+  {
+    "name": "Visibility assertion failed",
+    "matchedStatuses": [
+      "failed"
+    ],
+    "messageRegex": ".*toBeVisible.*|.*toBeHidden.*|.*toBeEnabled.*|.*toBeDisabled.*"
+  },
+  {
+    "name": "Action timeout",
     "matchedStatuses": [
       "broken"
     ],
-    "messageRegex": ".*TimeoutError.*|.*timeout.*exceeded.*"
+    "messageRegex": ".*actionTimeout.*|.*Timeout.*waiting for.*click.*|.*Timeout.*waiting for.*fill.*"
   },
   {
-    "name": "Network errors",
+    "name": "Navigation timeout",
     "matchedStatuses": [
       "broken"
     ],
-    "messageRegex": ".*net::ERR.*|.*ECONNREFUSED.*"
+    "messageRegex": ".*navigationTimeout.*|.*page.goto.*timeout.*|.*waitForNavigation.*"
+  },
+  {
+    "name": "Element wait timeout",
+    "matchedStatuses": [
+      "broken"
+    ],
+    "messageRegex": ".*waitForSelector.*|.*waitForLocator.*|.*locator.waitFor.*"
+  },
+  {
+    "name": "Expect timeout",
+    "matchedStatuses": [
+      "broken"
+    ],
+    "messageRegex": ".*expect.*timeout.*|.*Timeout.*expect.*"
   },
   {
     "name": "Element not found",
     "matchedStatuses": [
-      "failed",
+      "broken",
+      "failed"
+    ],
+    "messageRegex": ".*strict mode violation.*|.*resolved to.*elements.*|.*No element found.*"
+  },
+  {
+    "name": "Element not interactable",
+    "matchedStatuses": [
       "broken"
     ],
-    "messageRegex": ".*strict mode violation.*|.*locator.*resolved to.*|.*waiting for.*"
+    "messageRegex": ".*element is not attached.*|.*element is outside.*|.*intercepts pointer.*|.*not visible.*"
+  },
+  {
+    "name": "Multiple elements matched",
+    "matchedStatuses": [
+      "broken"
+    ],
+    "messageRegex": ".*strict mode violation.*resolved to.*[2-9].*elements.*"
+  },
+  {
+    "name": "Network error",
+    "matchedStatuses": [
+      "broken"
+    ],
+    "messageRegex": ".*net::ERR.*|.*ECONNREFUSED.*|.*ENOTFOUND.*|.*NetworkError.*"
+  },
+  {
+    "name": "Page load failed",
+    "matchedStatuses": [
+      "broken"
+    ],
+    "messageRegex": ".*ERR_NAME_NOT_RESOLVED.*|.*ERR_CONNECTION_REFUSED.*|.*Failed to load.*"
+  },
+  {
+    "name": "Page crashed",
+    "matchedStatuses": [
+      "broken"
+    ],
+    "messageRegex": ".*page crashed.*|.*Target closed.*|.*Session closed.*"
+  },
+  {
+    "name": "Browser context error",
+    "matchedStatuses": [
+      "broken"
+    ],
+    "messageRegex": ".*browserContext.*|.*browser has been closed.*"
   },
   {
     "name": "Ignored tests",
     "matchedStatuses": [
       "skipped"
+    ]
+  },
+  {
+    "name": "Flaky tests",
+    "matchedStatuses": [
+      "failed"
+    ],
+    "traceRegex": ".*retry.*"
+  },
+  {
+    "name": "Unknown failures",
+    "matchedStatuses": [
+      "unknown"
     ]
   }
 ]

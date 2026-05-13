@@ -1,0 +1,12 @@
+📋 Processing Order: ORD-260510-236502-00013
+🔄 Updating 0 rows...
+✅ Clicked Update Button
+🔍 Total rows found: 3
+🎯 Final Extracted Products: 0
+✅ Final Table Data: {
+  products: [],
+  summary: { netPayable: 0, netPayableInWords: '' },
+  totalItems: 0
+}
+Products: []
+Count: 0

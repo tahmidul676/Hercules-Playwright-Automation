@@ -1,0 +1,351 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: TC_05_SND_Order_ApprovalPendingOrderViewTest.spec.js >> TC_05_SND_Order_ApprovalPendingOrderTest
+- Location: tests\TC_05_SND_Order_ApprovalPendingOrderViewTest.spec.js:8:5
+
+# Error details
+
+```
+Error: locator.textContent: Error: strict mode violation: locator('//td[normalize-space()=\'Net Payable(BDT):\']/following-sibling::td') resolved to 2 elements:
+    1) <td colspan="5" class="fw-bold text-start align-middle">Nine Thousand Nine Hundred Twenty</td> aka getByRole('cell', { name: 'Nine Thousand Nine Hundred' })
+    2) <td class="fw-bold text-end align-middle">9,920</td> aka getByRole('cell', { name: '9,920' }).nth(4)
+
+Call log:
+  - waiting for locator('//td[normalize-space()=\'Net Payable(BDT):\']/following-sibling::td')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active]:
+  - generic:
+    - generic:
+      - generic:
+        - generic [ref=e1]:
+          - link "application logo" [ref=e3] [cursor=pointer]:
+            - /url: /
+            - img "application logo" [ref=e4]
+          - searchbox "Search menu items" [ref=e7]
+          - generic [ref=e8]:
+            - link "" [ref=e9] [cursor=pointer]:
+              - /url: /bulk-upload-list
+              - generic "Upload Manager" [ref=e10]: 
+            - link "" [ref=e11] [cursor=pointer]:
+              - /url: /download-manager
+              - generic "Download Manager" [ref=e12]: 
+            - generic "View In Full Screen" [ref=e13] [cursor=pointer]: 
+            - generic "Notifications" [ref=e14] [cursor=pointer]:
+              - generic [ref=e15]:
+                - text: 
+                - generic "8 unread messages" [ref=e16]: "8"
+            - img "Profile" [ref=e19] [cursor=pointer]
+        - generic [ref=e21] [cursor=pointer]:
+          - button "Open sidebar" [ref=e22]:
+            - generic [ref=e24]: 󰅂
+          - generic [ref=e25]:
+            - link "󰄫 Dashboard" [ref=e27]:
+              - /url: /
+              - generic [ref=e28]: 󰄫
+              - generic: Dashboard
+            - generic [ref=e31]: 
+            - generic [ref=e34]: 
+            - generic [ref=e37]: 
+            - generic [ref=e40]: 
+            - generic [ref=e43]: 
+            - generic [ref=e46]: 
+            - generic [ref=e49]: 
+            - generic [ref=e52]: 
+            - generic [ref=e55]: 
+        - generic [ref=e57]:
+          - generic [ref=e58]:
+            - generic [ref=e59]:
+              - heading "Order Details" [level=1]
+              - list [ref=e60]:
+                - listitem [ref=e61]:
+                  - link "Dashboard" [ref=e62] [cursor=pointer]:
+                    - /url: /
+                - listitem [ref=e63]: /
+                - listitem: Order Details
+            - link "List" [ref=e64] [cursor=pointer]:
+              - /url: /snd/orders/approval-pending?from=2026-05-05&to=2026-05-12&warehouse_id=400&route_id=3611&retailer_id=236507&retailer_name=City+Store+3
+              - button "List" [ref=e66]:
+                - generic [ref=e67]: 
+                - text: List
+          - generic [ref=e73]:
+            - generic [ref=e75]:
+              - generic [ref=e77]: "1"
+              - generic "Order" [ref=e79]
+            - generic [ref=e80]:
+              - generic [ref=e82]: "2"
+              - generic "Proforma" [ref=e84]
+            - generic [ref=e85]:
+              - generic [ref=e87]: "3"
+              - generic "Picking" [ref=e89]
+            - generic [ref=e90]:
+              - generic [ref=e92]: "4"
+              - generic "Collection Summary" [ref=e94]
+            - generic [ref=e95]:
+              - generic [ref=e97]: "5"
+              - generic "Delivery" [ref=e99]
+            - generic [ref=e100]:
+              - generic [ref=e102]: "6"
+              - generic "Collection Posting" [ref=e104]
+          - generic [ref=e107]:
+            - generic [ref=e108]:
+              - heading "Sold To" [level=6] [ref=e109]
+              - paragraph [ref=e110]:
+                - strong [ref=e111]: R00236507
+                - text: City Store 3
+              - paragraph [ref=e112]:
+                - generic [ref=e113]: 
+                - text: "-"
+              - paragraph [ref=e114]:
+                - generic [ref=e115]: 
+                - text: "8801670000725"
+            - generic [ref=e116]:
+              - heading "Order Information" [level=6] [ref=e117]
+              - paragraph [ref=e118]:
+                - strong [ref=e119]: "Branch:"
+                - text: Rampura Branch
+              - paragraph [ref=e120]:
+                - strong [ref=e121]: "Route:"
+                - text: Rampura Route 1
+              - paragraph [ref=e122]:
+                - strong [ref=e123]: "Market:"
+                - text: Rampura Market 1
+              - paragraph [ref=e124]:
+                - strong [ref=e125]: "Sub Market:"
+                - text: Rampura Submarket 1
+            - generic [ref=e126]:
+              - heading "Order Details" [level=6] [ref=e127]
+              - paragraph [ref=e128]:
+                - strong [ref=e129]: "Order ID:"
+                - text: ORD-260510-236502-00013
+              - paragraph [ref=e130]:
+                - strong [ref=e131]: "Status:"
+                - generic [ref=e132]: Pending
+              - paragraph [ref=e133]:
+                - strong [ref=e134]: "Distributor:"
+                - text: Territory Manager - Pediatrics
+              - paragraph [ref=e135]:
+                - strong [ref=e136]: "Order Date:"
+                - text: 10-05-2026
+              - paragraph [ref=e137]:
+                - strong [ref=e138]: "Expected Delivery:"
+                - text: 10-05-2026
+          - table [ref=e141]:
+            - rowgroup [ref=e142]:
+              - row "Code Description Quantity Per Pack Total Discount Net TP Net Value" [ref=e143]:
+                - columnheader "Code" [ref=e144]
+                - columnheader "Description" [ref=e145]
+                - columnheader "Quantity" [ref=e146]
+                - columnheader "Per Pack" [ref=e147]
+                - columnheader "Total" [ref=e148]
+                - columnheader "Discount" [ref=e149]
+                - columnheader "Net TP" [ref=e150]
+                - columnheader "Net Value" [ref=e151]
+              - row "TP VAT (%) TP VAT % Amount" [ref=e152]:
+                - columnheader "TP" [ref=e153]
+                - columnheader "VAT (%)" [ref=e154]
+                - columnheader "TP" [ref=e155]
+                - columnheader "VAT" [ref=e156]
+                - columnheader "%" [ref=e157]
+                - columnheader "Amount" [ref=e158]
+            - rowgroup [ref=e159]:
+              - row "SKC01 Electrolyte Sports Drinks Orange 10 300 - 3,000 - - - 3,000 3,000" [ref=e160]:
+                - cell "SKC01" [ref=e161]
+                - cell "Electrolyte Sports Drinks Orange" [ref=e162]:
+                  - generic [ref=e163]: Electrolyte Sports Drinks Orange
+                - cell "10" [ref=e164]
+                - cell "300" [ref=e165]
+                - cell "-" [ref=e166]
+                - cell "3,000" [ref=e167]
+                - cell "-" [ref=e168]
+                - cell "-" [ref=e169]
+                - cell "-" [ref=e170]
+                - cell "3,000" [ref=e171]
+                - cell "3,000" [ref=e172]
+              - row "SKU00013 Esonaaf 20 mg Capsule 9 100 - 900 - - - 900 900" [ref=e173]:
+                - cell "SKU00013" [ref=e174]
+                - cell "Esonaaf 20 mg Capsule" [ref=e175]:
+                  - generic [ref=e176]: Esonaaf 20 mg Capsule
+                - cell "9" [ref=e177]
+                - cell "100" [ref=e178]
+                - cell "-" [ref=e179]
+                - cell "900" [ref=e180]
+                - cell "-" [ref=e181]
+                - cell "-" [ref=e182]
+                - cell "-" [ref=e183]
+                - cell "900" [ref=e184]
+                - cell "900" [ref=e185]
+              - row "SKU00017 Mancer 75 WP 14 430 - 6,020 - - - 6,020 6,020" [ref=e186]:
+                - cell "SKU00017" [ref=e187]
+                - cell "Mancer 75 WP" [ref=e188]:
+                  - generic [ref=e189]: Mancer 75 WP
+                - cell "14" [ref=e190]
+                - cell "430" [ref=e191]
+                - cell "-" [ref=e192]
+                - cell "6,020" [ref=e193]
+                - cell "-" [ref=e194]
+                - cell "-" [ref=e195]
+                - cell "-" [ref=e196]
+                - cell "6,020" [ref=e197]
+                - cell "6,020" [ref=e198]
+            - rowgroup [ref=e199]:
+              - 'row "Gross Total: 9,920 - - - 9,920 9,920" [ref=e200]':
+                - cell "Gross Total:" [ref=e201]
+                - cell "9,920" [ref=e202]
+                - cell "-" [ref=e203]
+                - cell "-" [ref=e204]
+                - cell "-" [ref=e205]
+                - cell "9,920" [ref=e206]
+                - cell "9,920" [ref=e207]
+              - 'row "TP + VAT: 9,920 Adjustment(+/-): -" [ref=e208]':
+                - cell "TP + VAT:" [ref=e209]
+                - cell "9,920" [ref=e210]
+                - cell "Adjustment(+/-):" [ref=e211]
+                - cell "-" [ref=e212]
+              - 'row "Gross Discount: -" [ref=e213]':
+                - cell [ref=e214]
+                - cell "Gross Discount:" [ref=e215]
+                - cell "-" [ref=e216]
+              - 'row "Net Payable(BDT): Nine Thousand Nine Hundred Twenty 9,920" [ref=e217]':
+                - cell "Net Payable(BDT):" [ref=e218]
+                - cell "Nine Thousand Nine Hundred Twenty" [ref=e219]
+                - cell "9,920" [ref=e220]
+```
+
+# Test source
+
+```ts
+  60  |     await this.filterBtn.click();
+  61  |   }
+  62  | 
+  63  |   async selectCheckboxByOrderId(orderId) {
+  64  |     const rows = this.page.locator("tbody tr");
+  65  | 
+  66  |     for (let i = 0; i < (await rows.count()); i++) {
+  67  |       const row = rows.nth(i);
+  68  |       const text = await row.textContent();
+  69  | 
+  70  |       if (orderId.some((id) => text.includes(id))) {
+  71  |         const checkbox = row.locator('input[type="checkbox"]');
+  72  | 
+  73  |         if (!(await checkbox.isChecked())) {
+  74  |           await checkbox.check();
+  75  |         }
+  76  |       }
+  77  |     }
+  78  |   }
+  79  | 
+  80  |   async clickConfirmOrder() {
+  81  |     await expect(this.confirmOrderBtn).toBeVisible();
+  82  |     await this.confirmOrderBtn.click();
+  83  |   }
+  84  | 
+  85  |   async selectStatus(statusValue) {
+  86  |     await expect(this.statusDropdown).toBeVisible();
+  87  |     await this.statusDropdown.selectOption(statusValue);
+  88  |   }
+  89  | 
+  90  |   async clickSubmitApprove() {
+  91  |     await expect(this.submitButtonApprove).toBeVisible();
+  92  |     await this.submitButtonApprove.click();
+  93  | 
+  94  |   }
+  95  | 
+  96  |  // Keep itemSelectedText as a helper locator
+  97  | async itemSelectedText() {
+  98  |   return this.page.locator("p.mb-0", { hasText: /\d+\s+items?\s+selected/ });
+  99  | }
+  100 | 
+  101 | // Add this method to extract the number
+  102 | async getSelectedItemCount() {
+  103 |   const locator = await this.itemSelectedText();
+  104 |   const text = await locator.textContent();
+  105 |   const match = text?.match(/^(\d+)/);
+  106 |   return match ? parseInt(match[1]) : 0;
+  107 | }
+  108 | 
+  109 | // async selectOrderByOrderFrom(expectedOrderFrom) {
+  110 | //   const rows = this.page.locator("table tbody tr");
+  111 | //   const rowCount = await rows.count();
+  112 | //   let found = false;
+  113 | 
+  114 | //   for (let i = 0; i < rowCount; i++) {
+  115 | //     const row = rows.nth(i);
+  116 | //     const cellText = await row.textContent();
+  117 | 
+  118 | //     if (cellText.includes(expectedOrderFrom)) {
+  119 | //       await row.locator("input[type='checkbox']").check();
+  120 | //       found = true;
+  121 | //       break;
+  122 | //     }
+  123 | //   }
+  124 | 
+  125 | //   return found; //just return, no expect here
+  126 | // }
+  127 | 
+  128 | //
+  129 | async selectCheckboxByOrderIdViewClick(orderId) {
+  130 |     const rows = this.page.locator("tbody tr");
+  131 | 
+  132 |     for (let i = 0; i < (await rows.count()); i++) {
+  133 |       const row = rows.nth(i);
+  134 |       const text = await row.textContent();
+  135 | 
+  136 |       if (orderId.some((id) => text.includes(id))) {
+  137 |         const checkbox = row.locator('input[type="checkbox"]');
+  138 |         const viewButton = row.locator("button[aria-label='View Incoming Order Details']");
+  139 | 
+  140 |         if (!(await checkbox.isChecked())) {
+  141 |           await checkbox.check();
+  142 |           await viewButton.click();
+  143 |         }
+  144 |       }
+  145 |     }
+  146 |   }
+  147 | //
+  148 | async getNetPayableValue() {
+  149 | 
+  150 |   const netPayableText = this.page.locator(
+  151 |     "//td[normalize-space()='Net Payable(BDT):']"
+  152 |   );
+  153 | 
+  154 |   // Scroll to bottom element
+  155 |   await netPayableText.scrollIntoViewIfNeeded();
+  156 | 
+  157 |   // Get dynamic value
+  158 |   const value = await this.page.locator(
+  159 |     "//td[normalize-space()='Net Payable(BDT):']/following-sibling::td"
+> 160 |   ).textContent();
+      |     ^ Error: locator.textContent: Error: strict mode violation: locator('//td[normalize-space()=\'Net Payable(BDT):\']/following-sibling::td') resolved to 2 elements:
+  161 | 
+  162 |   console.log("Net Payable Value:", value);
+  163 | 
+  164 |   return value?.trim();
+  165 | }
+  166 | 
+  167 | 
+  168 | 
+  169 | 
+  170 | 
+  171 | 
+  172 | 
+  173 | 
+  174 | 
+  175 | 
+  176 | 
+  177 | 
+  178 | 
+  179 | 
+  180 | };
+  181 | 
+```

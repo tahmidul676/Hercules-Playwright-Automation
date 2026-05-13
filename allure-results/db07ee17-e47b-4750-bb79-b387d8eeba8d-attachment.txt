@@ -1,0 +1,13 @@
+📋 Processing Order: ORD-260510-236502-00014
+🔄 Starting order update...
+🔍 Found 3 rows
+✅ Updated → SKC01 : 4
+✅ Updated → SKU00013 : 4
+✅ Updated → SKU00017 : 4
+✅ Clicking Update Button...
+✅ Update completed successfully
+📋 Processing Order: ORD-260510-236502-00014
+🔄 Starting order update...
+🔍 Found 3 rows
+⚠️ Error during update: page.waitForTimeout: Target page, context or browser has been closed
+🔄 Re-opening order for verification...
