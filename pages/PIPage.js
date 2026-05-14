@@ -76,6 +76,7 @@ exports.PIPage = class PIPage {
 
         if (!(await checkbox.isChecked())) {
           await checkbox.check();
+         // await checkbox.check({ force: true });
         }
       }
     }
@@ -87,6 +88,83 @@ exports.PIPage = class PIPage {
   }
 
 
+// ---------Apply filter to get data----------------
 
-  
+//------------------------
+/*
+async selectOrderByOrderFrom(expectedOrderFrom) {
+  const rows = this.page.locator("table tbody tr");
+  const rowCount = await rows.count();
+  let found = false;
+
+  for (let i = 0; i < rowCount; i++) {
+    // Re-query fresh each iteration to avoid stale references
+    const row = this.page.locator("table tbody tr").nth(i);
+    const cellText = await row.textContent();
+
+    const hasCheckbox =
+      await this.page
+        .locator("table tbody tr")
+        .nth(i)
+        .locator("input[type='checkbox']")
+        .count();
+
+    if (hasCheckbox === 0) continue;
+
+    if (cellText.includes(expectedOrderFrom)) {
+      // Direct JS evaluation — no Playwright action chain
+      await this.page.evaluate((index) => {
+        const rows = document.querySelectorAll("table tbody tr");
+        const checkbox = rows[index].querySelector("input[type='checkbox']");
+        if (checkbox) checkbox.click();
+      }, i);
+
+      found = true;
+      break;
+    }
+  }
+
+  return found;
+}
+
+*/
+//--------------------------
+ async selectOrderByOrderFrom(expectedOrderFrom) {
+  const rows = this.page.locator("table tbody tr");
+  const rowCount = await rows.count();
+  let found = false;
+
+  console.log(JSON.stringify({ searching: expectedOrderFrom, totalRows: rowCount }));
+
+  for (let i = 0; i < rowCount; i++) {
+    const row = this.page.locator("table tbody tr").nth(i);
+    const cellText = await row.textContent();
+
+    const hasCheckbox =
+      await this.page
+        .locator("table tbody tr")
+        .nth(i)
+        .locator("input[type='checkbox']")
+        .count();
+
+    console.log(JSON.stringify({ row: i, hasCheckbox: hasCheckbox === 1, text: cellText?.trim() }));
+
+    if (hasCheckbox === 0) continue;
+
+    if (cellText.includes(expectedOrderFrom)) {
+      await this.page.evaluate((index) => {
+        const rows = document.querySelectorAll("table tbody tr");
+        const checkbox = rows[index].querySelector("input[type='checkbox']");
+        if (checkbox) checkbox.click();
+      }, i);
+
+      console.log(JSON.stringify({ row: i, action: "checkbox clicked", matched: expectedOrderFrom }));
+      found = true;
+      break;
+    }
+  }
+
+  console.log(JSON.stringify({ result: found }));
+  return found;
+}
 };

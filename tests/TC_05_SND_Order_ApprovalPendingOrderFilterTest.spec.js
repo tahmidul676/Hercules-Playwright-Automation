@@ -5,7 +5,7 @@ import loginData from "../testData/loginData.json";
 import approvalPendingOrder from "../testData/approvalPendingOrder.json";
 import { DashboardPage } from "../pages/DashboardPage";
 
-test("TC_05_SND_Order_ApprovalPendingOrderFilterTest.spec.js", async ({ page }) => {
+test("SND_Order_ApprovalPendingOrderFilterTest", async ({ page }) => {
   // Login Page
   const loginPage = new LoginPage(page);
   const data = loginData[0];
@@ -35,7 +35,7 @@ test("TC_05_SND_Order_ApprovalPendingOrderFilterTest.spec.js", async ({ page }) 
  await orderPage.selectOrderByOrderFrom(appPendingData.orderFrom);
  const found = await orderPage.selectOrderByOrderFrom(appPendingData.orderFrom);
 expect(found, `Order From: "${appPendingData.orderFrom}" not found in table`).toBe(true);
-
+console.log(`Order From: "${appPendingData.orderFrom}" found in table`);
   
 
 });

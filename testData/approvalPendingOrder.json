@@ -2,14 +2,14 @@
   {
     "branch": "Rampura Branch",
     "route": "Rampura Route 1",
-    "retailer": "Bismillah",
-    "orderId": ["ORD-260510-236502-00013"
+    "retailer": "City Store",
+    "orderId": ["ORD-260510-236502-00014"
 ],
     "status": "5",
-    "orderFrom": "Abcd Store 7",
+    "orderFrom": "Bismillah",
     
     "products": [
-      { "code": "SKC01", "quantity": 3 },
+      { "code": "SKC01", "quantity": 5},
       { "code": "SKU00013", "quantity": 3 },
       { "code": "SKU00017", "quantity": 3}
     ],

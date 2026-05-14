@@ -108,25 +108,56 @@ async getSelectedItemCount() {
 
 
 // ---------Apply filter to get data----------------
+// async selectOrderByOrderFrom(expectedOrderFrom) {
+//   const rows = this.page.locator("table tbody tr");
+//   const rowCount = await rows.count();
+//   let found = false;
+
+//   for (let i = 0; i < rowCount; i++) {
+//     const row = rows.nth(i);
+//     const cellText = await row.textContent();
+
+//     if (cellText.includes(expectedOrderFrom)) {
+//       await row.locator("input[type='checkbox']").check();
+//       found = true;
+//       break;
+//     }
+//   }
+
+//   return found; //just return, no expect here
+// }
 async selectOrderByOrderFrom(expectedOrderFrom) {
   const rows = this.page.locator("table tbody tr");
   const rowCount = await rows.count();
   let found = false;
 
+  console.log(JSON.stringify({ searching: expectedOrderFrom, totalRows: rowCount }));
+
   for (let i = 0; i < rowCount; i++) {
     const row = rows.nth(i);
+    const cells = row.locator("td");
+    const cellCount = await cells.count();
+
+    const rowData = {};
+    for (let j = 0; j < cellCount; j++) {
+      rowData[`col_${j}`] = (await cells.nth(j).textContent())?.trim();
+    }
+
+    console.log(JSON.stringify({ row: i, ...rowData }));
+
     const cellText = await row.textContent();
 
     if (cellText.includes(expectedOrderFrom)) {
       await row.locator("input[type='checkbox']").check();
+      console.log(JSON.stringify({ row: i, action: "checkbox checked", matched: expectedOrderFrom }));
       found = true;
       break;
     }
   }
 
-  return found; //just return, no expect here
+  console.log(JSON.stringify({ result: found }));
+  return found;
 }
-
 //----------------------------------------------------------
 
 //
@@ -166,7 +197,7 @@ async getNetPayableValue() {
   return value?.trim();
 }
 
-// 
+// Get Table Data
 async getTableData(orderIds = []) {
 
   const rows = this.page.locator("#wrapper-content tbody tr");

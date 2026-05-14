@@ -1,0 +1,25 @@
+Table fully loaded
+Total rows found: 10
+Total cells in first row: 20
+  Cell[1]: ""
+  Cell[2]: "Rampura Branch"
+  Cell[3]: "Rampura Route 1"
+  Cell[4]: "Rampura Market 1"
+  Cell[5]: "R00236508"
+  Cell[6]: "Abcd Store 7"
+  Cell[7]: "8801670000726"
+  Cell[8]: "ORD-260420-236502-00006"
+  Cell[9]: "2026-04-20"
+  Cell[10]: "03:53 PM"
+  Cell[11]: "PI001-ORD-260420-236502-00006"
+  Cell[12]: "2026-05-14"
+  Cell[13]: "13:14 PM"
+  Cell[14]: "1,500"
+  Cell[15]: "-"
+  Cell[16]: "-"
+  Cell[17]: "1,500"
+  Cell[18]: "1,500"
+  Cell[19]: "NAAFCO User"
+  Cell[20]: "Pending"
+Found Order ID "ORD-260420-236502-00006" at row 1, cell 8
+Total checkboxes checked: 1

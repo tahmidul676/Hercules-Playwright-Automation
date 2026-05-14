@@ -1,2 +1,0 @@
-✅ Extracted 0 products
-📊 Summary: { grossTotal: 0, netPayable: 0, netPayableInWords: '' }

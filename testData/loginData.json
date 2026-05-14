@@ -3,5 +3,10 @@
     "url": "https://dmsweb.sslwireless.com/",
     "userMobileNumberInput": "01313006789",
     "password": "Password12"
+  },
+   {
+    "url": "https://dmsweb.sslwireless.com/",
+    "userMobileNumberInput": "Password12",
+    "password": "Password12"
   }
 ]
