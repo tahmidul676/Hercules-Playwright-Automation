@@ -1,4 +1,0 @@
-⚠️ Error during update: page.waitForNavigation: Test timeout of 60000ms exceeded.
-=========================== logs ===========================
-waiting for navigation until "networkidle"
-============================================================

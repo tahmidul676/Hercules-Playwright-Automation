@@ -1,9 +1,0 @@
-📋 Processing Order: ORD-260510-236502-00014
-🔄 Starting order update...
-🔍 Found 0 rows before update
-✅ Clicked Update Button
-📊 Extracting table data...
-🎯 Final Extracted Products: 0
-✅ Final Table Data: { products: [], summary: { netPayable: 0 }, totalItems: 0 }
-Products: []
-Count: 0

@@ -1,5 +1,0 @@
-Products: []
-Summary: {
-  netPayable: 9920,
-  netPayableInWords: 'Nine Thousand Nine Hundred Twenty'
-}

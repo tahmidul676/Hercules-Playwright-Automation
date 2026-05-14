@@ -1,0 +1,9 @@
+{"searching":"City Store","totalRows":2}
+{"row":0,"col_0":"","col_1":"ORD-260510-236502-00014","col_2":"1778404228853","col_3":"2026-05-10","col_4":"-","col_5":"2,230","col_6":"0.00","col_7":"City Store 3","col_8":"MPO 06","col_9":"-","col_10":"Pending","col_11":""}
+{"row":0,"action":"checkbox checked","matched":"City Store"}
+{"result":true}
+{"searching":"City Store","totalRows":2}
+{"row":0,"col_0":"","col_1":"ORD-260510-236502-00014","col_2":"1778404228853","col_3":"2026-05-10","col_4":"-","col_5":"2,230","col_6":"0.00","col_7":"City Store 3","col_8":"MPO 06","col_9":"-","col_10":"Pending","col_11":""}
+{"row":0,"action":"checkbox checked","matched":"City Store"}
+{"result":true}
+Order From: "City Store" found in table

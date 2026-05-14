@@ -1,4 +1,0 @@
-⚠️ Error during update: page.waitForNavigation: Timeout 20000ms exceeded.
-=========================== logs ===========================
-waiting for navigation until "load"
-============================================================

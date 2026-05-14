@@ -1,6 +1,0 @@
-✅ Extracted 3 products
-📊 Summary: {
-  grossTotal: 2490,
-  netPayable: 2540,
-  netPayableInWords: 'Two Thousand Five Hundred Forty'
-}

@@ -3,9 +3,10 @@
    
     "branch": "Rampura Branch",
     "route": "Rampura Route 1",
-    "retailer": "City Store",
+    "retailer": "City Store 3",
      "orderId": [
-       "ORD-260511-236502-00007"
-    ]
+       "ORD-260505-236502-00002"
+    ],
+    "retailerName": "Bismillah"
   }
 ]

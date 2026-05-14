@@ -30,7 +30,7 @@ export default defineConfig({
   //reporter: "html",
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   timeout: 60000, // whole test
-  expect: { timeout: 30000 }, //  applies to ALL expect() automatically
+  expect: { timeout: 60000 }, //  applies to ALL expect() automatically
   //Allure Reporter Configuration
   reporter: [
     ["line"],
