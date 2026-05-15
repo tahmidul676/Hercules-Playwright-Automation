@@ -6,7 +6,24 @@
     "orderId": ["ORD-260510-236502-00014"
 ],
     "status": "5",
-    "orderFrom": "Bismillah",
+    "orderFrom": "City Store",
+    
+    "products": [
+      { "code": "SKC01", "quantity": 5},
+      { "code": "SKU00013", "quantity": 3 },
+      { "code": "SKU00017", "quantity": 3}
+    ],
+    
+    "adjustment": 50,
+    "grossDiscount": 50
+  },
+  {
+    "branch": "Rampura Branch",
+    "route": "Rampura Route 1",
+    "retailer": "City Store",
+    "orderId": ["ORD-260510-236502-00015"],
+    "status": "5",
+    "orderFromInvalid": "Bismillah",
     
     "products": [
       { "code": "SKC01", "quantity": 5},

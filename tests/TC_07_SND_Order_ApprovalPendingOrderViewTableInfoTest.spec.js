@@ -38,17 +38,17 @@ test("SND_Order_ApprovalPendingOrderViewTableInfoTest", async ({ page }) => {
 
   const tableData = await orderPage.getFullProductTableData();
 
-  // ── Row count ─────────────────────────────────────────────────────────────
+  // ── Row count
   expect(tableData.products).toHaveLength(3);
 
-  // ── Summary (values from actual HTML) ────────────────────────────────────
+  // ── Summary (values from actual HTML)
   //xpect(tableData.summary.grossTotal).toBe(2490);
   expect(tableData.summary.netPayable).toBe(1380); // 2490 + 50 adjustment
   expect(tableData.summary.netPayableInWords).toContain(
     "One Thousand Three Hundred Eighty",
   );
 
-  // ── Products ──────────────────────────────────────────────────────────────
+  // ── Products
   /*
   const [first, second, third] = tableData.products;
 

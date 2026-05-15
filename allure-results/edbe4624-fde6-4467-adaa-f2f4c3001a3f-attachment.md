@@ -1,0 +1,106 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: TC_016_SND_PI_CollectionSummery_CreateFilterTest.spec.js >> SND_PI_CollectionSummery_CreateFilterTest
+- Location: tests\TC_016_SND_PI_CollectionSummery_CreateFilterTest.spec.js:9:5
+
+# Error details
+
+```
+ReferenceError: Cannot access 'collectionSummaryTestData' before initialization
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e6]:
+      - link "application logo" [ref=e8] [cursor=pointer]:
+        - /url: /
+        - img "application logo" [ref=e9]
+      - searchbox "Search menu items" [ref=e12]
+      - generic [ref=e13]:
+        - link "" [ref=e14] [cursor=pointer]:
+          - /url: /bulk-upload-list
+          - generic "Upload Manager" [ref=e15]: 
+        - link "" [ref=e16] [cursor=pointer]:
+          - /url: /download-manager
+          - generic "Download Manager" [ref=e17]: 
+        - generic "View In Full Screen" [ref=e18] [cursor=pointer]: 
+        - generic "Notifications" [ref=e19] [cursor=pointer]:
+          - generic [ref=e20]:
+            - text: 
+            - generic "9 unread messages" [ref=e21]: "9"
+        - img "Profile" [ref=e24] [cursor=pointer]
+    - generic [ref=e25]:
+      - text: 󰅂 󰄫           
+      - progressbar "circles-loading" [ref=e27]:
+        - img "circles-loading" [ref=e28]
+  - generic [ref=e32] [cursor=pointer]:
+    - generic [ref=e33]:
+      - img [ref=e35]
+      - generic [ref=e37]: successfully logged in
+    - button "close" [ref=e38]:
+      - img [ref=e39]
+    - generic [ref=e41]:
+      - progressbar "notification timer"
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from "@playwright/test";
+  2  | import { LoginPage } from "../pages/LoginPage";
+  3  | import { DashboardPage } from "../pages/DashboardPage";
+  4  | import { PickingPage } from "../pages/PickingPage";
+  5  | import loginData from "../testData/loginData.json";
+  6  | import pickingTestData from "../testData/pickingTestData.json";
+  7  | import collectionSummaryTestData from "../testData/collectionSummaryTestData.json";
+  8  | 
+  9  | test("SND_PI_CollectionSummery_CreateFilterTest", async ({ page }) => {
+  10 |   // Login Page
+  11 |   const loginPage = new LoginPage(page);
+  12 |   const data = loginData[0];
+  13 |   await loginPage.gotoLoginPage(data.url);
+  14 |   await loginPage.login(data.userMobileNumberInput, data.password);
+  15 |   //const data = loginData[0];
+  16 |   //await page.goto(data.url);
+  17 |   // Dashboard Page
+  18 |   const dashboardPage = new DashboardPage(page);
+  19 |   await dashboardPage.clickChevronRight();
+  20 |   await dashboardPage.clickSND();
+  21 |   await dashboardPage.clickPIMenu();
+  22 |   await dashboardPage.clickCollectionSummaryMenu();
+  23 |   await page.waitForTimeout(2000);
+  24 |   await dashboardPage.clickCreateCollectionSummary();
+  25 | 
+  26 |   // Picking Page
+  27 |   const pickingPage = new PickingPage(page);
+  28 |   const pickingData = pickingTestData[0];
+  29 |   await pickingPage.clickFilter();
+  30 |   await pickingPage.selectBranch(pickingData.branch);
+  31 |   await pickingPage.selectRoute(pickingData.route);
+  32 |   await pickingPage.selectRetailer(pickingData.retailer);
+  33 |   await pickingPage.clickSubmit();
+  34 |   await pickingPage.clickFinalFilter();
+> 35 |   const collectionSummaryTestData = collectionSummaryTestData[0];
+     |                                     ^ ReferenceError: Cannot access 'collectionSummaryTestData' before initialization
+  36 |   const found = await collectionSummaryTestData.selectOrderByOrderFrom(
+  37 |     collectionSummaryTestData.retailerName,
+  38 |   );
+  39 |   expect(
+  40 |     found,
+  41 |     `Retailer Name: "${collectionSummaryTestData.retailerName}" not found in table`,
+  42 |   ).toBe(true);
+  43 |   console.log(
+  44 |     `Retailer Name: "${collectionSummaryTestData.retailerName}" found in table`,
+  45 |   );
+  46 | });
+  47 | 
+```

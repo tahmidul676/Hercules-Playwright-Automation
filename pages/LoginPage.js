@@ -7,7 +7,6 @@ exports.LoginPage = class LoginPage {
     });
     this.passwordInput = page.getByRole("textbox", { name: "Password *" });
     this.loginButton = page.getByRole("button", { name: "Login" });
-    
   }
 
   async gotoLoginPage(url) {
@@ -15,7 +14,6 @@ exports.LoginPage = class LoginPage {
   }
 
   async gotoLoginPage(url) {
-    // await this.page.setViewportSize({ width: 1920, height: 1080 }); // ✅ maximize
     await this.page.goto(url);
     await this.page.waitForLoadState("networkidle");
   }

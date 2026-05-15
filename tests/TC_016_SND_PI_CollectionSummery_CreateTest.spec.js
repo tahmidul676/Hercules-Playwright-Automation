@@ -12,14 +12,16 @@ test("SND_PI_CollectionSummery_CreateTest", async ({ page }) => {
   const data = loginData[0];
   await loginPage.gotoLoginPage(data.url);
   await loginPage.login(data.userMobileNumberInput, data.password);
-
+  //const data = loginData[0];
+  //await page.goto(data.url);
   // Dashboard Page
   const dashboardPage = new DashboardPage(page);
   await dashboardPage.clickChevronRight();
   await dashboardPage.clickSND();
   await dashboardPage.clickPIMenu();
   await dashboardPage.clickCollectionSummaryMenu();
-  await dashboardPage.clickCreatePicking();
+  await page.waitForTimeout(2000);
+  await dashboardPage.clickCreateCollectionSummary();
 
   // Picking Page
   const pickingPage = new PickingPage(page);
@@ -35,5 +37,4 @@ test("SND_PI_CollectionSummery_CreateTest", async ({ page }) => {
   const collData = collectionSummaryTestData[0];
   await pickingPage.selectCheckboxByOrderId(collData.orderId);
   await pickingPage.clickProcess();
-  await page.waitForTimeout(2000);
 });

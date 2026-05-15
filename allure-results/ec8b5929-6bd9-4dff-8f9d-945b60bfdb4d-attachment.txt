@@ -1,0 +1,11 @@
+
+======= TABLE DATA =======
+Total rows found: 5
+Searching for retailer name: "City Store"
+==========================
+
+Row[0] =>  | Rampura Branch | Rampura Route 1 | Rampura Market 1 | R00236508 | Abcd Store 7 | 8801670000726 | ORD-260420-236502-00006 | 2026-04-20 | 03:53 PM | PI001-ORD-260420-236502-00006 | 2026-05-14 | 13:14 PM | 1,500 | - | - | 1,500 | 1,500 | NAAFCO User | Picked
+Row[1] =>  | Rampura Branch | Rampura Route 1 | Rampura Market 1 | R00236507 | City Store 3 | 8801670000725 | ORD-260510-236502-00013 | 2026-05-10 | 03:04 PM | PI001-ORD-260510-236502-00013 | 2026-05-14 | 13:12 PM | 2,490 | - | - | 2,490 | 2,490 | NAAFCO User | Picked
+
+✅ Match found at Row[1] for "City Store"
+Retailer Name: "City Store" found in table

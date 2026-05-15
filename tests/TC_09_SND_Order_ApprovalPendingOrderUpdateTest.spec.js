@@ -35,7 +35,6 @@ test("SND_Order_ApprovalPendingOrderUpdateTest", async ({ page }) => {
   //await orderPage.selectCheckboxByOrderId(appPendingData.orderId);
   await orderPage.selectCheckboxByOrderIdUpdateClick(appPendingData.orderId);
   await expect(page).toHaveURL(/\/snd\/orders\/update/);
-  
 
   // ==================== UPDATE ORDER ====================
   console.log(`📋 Processing Order: ${appPendingData.orderId[0]}`);
@@ -43,8 +42,7 @@ test("SND_Order_ApprovalPendingOrderUpdateTest", async ({ page }) => {
   // Capture verified quantities from the update method directly
   const verifiedProducts = await orderPage.updateOrderWithJson(appPendingData);
 
-  // ==================== ASSERT WRITTEN VALUES ====================
-  // Values were verified in DOM before clicking save — assert them here
+  // Values were verified in DOM before clicking save
   console.log("🔎 Asserting pre-save DOM verified quantities...");
   for (const product of appPendingData.products) {
     const verified = verifiedProducts.find((p) => p.code === product.code);
@@ -56,8 +54,10 @@ test("SND_Order_ApprovalPendingOrderUpdateTest", async ({ page }) => {
     }
   }
 
-  // ==================== ASSERT FINAL URL ====================
-  await expect(page).toHaveURL(/\/snd\/orders\/approval-pending/, { timeout: 15000 });
+  // ASSERT FINAL URL
+  await expect(page).toHaveURL(/\/snd\/orders\/approval-pending/, {
+    timeout: 15000,
+  });
   console.log("✅ Returned to Approval Pending list");
 
   console.log("🎉 Test Completed Successfully!");

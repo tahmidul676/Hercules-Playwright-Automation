@@ -29,8 +29,8 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   //reporter: "html",
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
-  timeout: 60000, // whole test
-  expect: { timeout: 60000 }, //  applies to ALL expect() automatically
+  timeout: 30000, // whole test
+  expect: { timeout: 10000 }, //  applies to ALL expect() automatically
   //Allure Reporter Configuration
   reporter: [
     ["line"],
@@ -41,8 +41,8 @@ export default defineConfig({
         outputFolder: "allure-results",
         suiteTitle: true,
         attachments: {
-        includeAttachments: true,  //  auto attaches video/screenshot
-      },
+          includeAttachments: true, //  auto attaches video/screenshot
+        },
 
         // environmentInfo: {
         //   Project: "Hercules",
@@ -58,9 +58,9 @@ export default defineConfig({
     //viewport: { width: 1920, height: 1080 }, // Screen size (Works on Desktop)
     permissions: ["geolocation", "notifications", "camera", "microphone"],
     headless: false,
-    actionTimeout: 60000, //  applies to ALL actions (click, fill etc.)
-    navigationTimeout: 60000,
-    slowMo: 1000,
+    actionTimeout: 15000, //  applies to ALL actions (click, fill etc.)
+    navigationTimeout: 30000,
+    // slowMo: 1000,
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
@@ -72,12 +72,19 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
+    // ✅ Step 1: Auth setup runs first, once
+    // {
+    //   name: "setup",
+    //   testMatch: /auth\.setup\.js/,
+    // },
     {
       name: "chromium",
       use: {
         ...devices["Desktop Chrome"],
-        //viewport: { width: 1920, height: 1080 },
+        viewport: { width: 1920, height: 1080 },
+        // storageState: "auth/user.json", // 👈 injected into every test
       },
+      //  dependencies: ["setup"], // 👈 waits for setup to finish first
     },
     /*
     {

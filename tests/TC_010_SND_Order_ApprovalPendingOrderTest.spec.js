@@ -35,10 +35,8 @@ test("SND_Order_ApprovalPendingOrderTest", async ({ page }) => {
   await orderPage.selectCheckboxByOrderId(appPendingData.orderId);
   await orderPage.clickConfirmOrder();
   await orderPage.selectStatus(appPendingData.status);
-  //await page.waitForTimeout(2000); // waits 2 seconds
   await orderPage.clickSubmitApprove();
   await expect(page.locator(".Toastify__toast-body")).toHaveText(
     "request successfully done",
   );
-
 });

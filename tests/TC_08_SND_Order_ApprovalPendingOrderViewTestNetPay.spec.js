@@ -32,11 +32,10 @@ test("SND_Order_ApprovalPendingOrderViewTestNetPay", async ({ page }) => {
   await orderPage.selectRetailer(appPendingData.retailer);
   await orderPage.clickSubmit();
   await orderPage.clickFilter();
-  //await orderPage.selectCheckboxByOrderId(appPendingData.orderId);
   await orderPage.selectCheckboxByOrderIdViewClick(appPendingData.orderId);
   await expect(page).toHaveURL(/\/snd\/orders\/details/);
   const value = await orderPage.getNetPayableValue();
-console.log(value);
-expect(value).not.toBeNull();
-expect(value).not.toBe("");
+  console.log(value);
+  expect(value).not.toBeNull();
+  expect(value).not.toBe("");
 });

@@ -13,7 +13,8 @@ exports.DashboardPage = class DashboardPage {
     });
     // PI
     this.piMenu = page.locator("div").filter({ hasText: /^PI$/ }).nth(1);
-    //this.createLink = page.getByRole("link", { name: "Create" });
+
+    this.createLinkPI = page.getByRole("link", { name: "Create" }).nth(0);
 
     // Picking
     this.pickingMenu = page
@@ -21,23 +22,21 @@ exports.DashboardPage = class DashboardPage {
       .filter({ hasText: /^Picking$/ })
       .nth(1);
 
-      this.createLinkPI = page.locator(
-      "//span[contains(@class,'_thirdLevelText_m0gtk_861')][normalize-space()='Create']",
-    );
-    
-    this.createLinkPicking = page.locator(
-      "//span[@class='_fourthLevelText_m0gtk_961'][normalize-space()='Create']",
-    );
+    this.createLinkPicking = page.getByRole("link", { name: "Create" }).nth(1);
 
     // Collection Summary
     this.createLinkCollectionSummary = page.locator(
       "//a[@href='/snd/pi/collection-summary-create']//span[@class='_fourthLevelText_m0gtk_961'][normalize-space()='Create']",
     );
-//span[@class='_fourthLevelText_m0gtk_961'][normalize-space()='Create']
+
     this.collectionSummaryMenu = page
       .locator("div")
       .filter({ hasText: /^Collection Summary$/ })
       .nth(1);
+
+    this.createLinkSummery = page.locator(
+      "//a[@href='/snd/pi/collection-summary-create']",
+    );
   }
 
   async clickChevronRight() {
@@ -47,7 +46,7 @@ exports.DashboardPage = class DashboardPage {
   async clickSND() {
     await this.sndMenu.click();
   }
-
+  // Order
   async clickOrder() {
     await this.orderMenu.click();
   }
@@ -55,30 +54,32 @@ exports.DashboardPage = class DashboardPage {
   async clickApprovalPendingOrder() {
     await this.approvalPendingOrder.click();
   }
-
+  // PI
   async clickPIMenu() {
     await this.piMenu.click();
   }
 
   async clickCreatePI() {
+    await this.createLinkPI.waitFor({ state: "visible" });
     await this.createLinkPI.click();
   }
-
+  // Picking
   async clickPickingMenu() {
     await this.pickingMenu.click();
   }
 
-  // same create as Picking
   async clickCreatePicking() {
-await this.createLinkPicking.waitFor({ state: "visible", timeout: 9000 });
-  await this.createLinkPicking.click();
-}
+    await this.createLinkPicking.waitFor({ state: "visible" });
+    await this.createLinkPicking.click();
+  }
 
+  // Collection Summary
   async clickCollectionSummaryMenu() {
     await this.collectionSummaryMenu.click();
   }
 
   async clickCreateCollectionSummary() {
-    await this.createLinkCollectionSummary.click();
+    await this.createLinkSummery.waitFor({ state: "visible" });
+    await this.createLinkSummery.click();
   }
 };

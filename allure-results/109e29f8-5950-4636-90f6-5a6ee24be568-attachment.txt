@@ -1,0 +1,13 @@
+
+======= TABLE DATA =======
+Total rows found: 5
+Searching for retailer name: "Bismillah"
+==========================
+
+Row[0] =>  | Rampura Branch | Rampura Route 1 | Rampura Market 1 | R00236508 | Abcd Store 7 | 8801670000726 | ORD-260420-236502-00006 | 2026-04-20 | 03:53 PM | PI001-ORD-260420-236502-00006 | 2026-05-14 | 13:14 PM | 1,500 | - | - | 1,500 | 1,500 | NAAFCO User | Picked
+Row[1] =>  | Rampura Branch | Rampura Route 1 | Rampura Market 1 | R00236507 | City Store 3 | 8801670000725 | ORD-260510-236502-00013 | 2026-05-10 | 03:04 PM | PI001-ORD-260510-236502-00013 | 2026-05-14 | 13:12 PM | 2,490 | - | - | 2,490 | 2,490 | NAAFCO User | Picked
+Row[2] =>  | Rampura Branch | Rampura Route 1 | Rampura Market 1 | R00236507 | City Store 3 | 8801670000725 | ORD-260505-236502-00003 | 2026-05-05 | 03:16 PM | PI001-ORD-260505-236502-00003 | 2026-05-12 | 10:30 AM | 10,022.50 | - | - | 10,022.50 | 10,022.50 | NAAFCO User | Picked
+Row[3] =>  | Rampura Branch | Rampura Route 1 | Rampura Market 1 | R00236507 | City Store 3 | 8801670000725 | ORD-260505-236502-01142 | 2026-05-05 | 02:57 PM | PI001-ORD-260505-236502-01142 | 2026-05-09 | 00:36 AM | 3,820 | - | - | 3,820 | 3,820 | NAAFCO User | Picked
+Row[4] =>  | Rampura Branch | Rampura Route 1 | Rampura Market 1 | R00236507 | City Store 3 | 8801670000725 | ORD-260507-236502-00007 | 2026-05-07 | 03:03 PM | PI001-ORD-260507-236502-00007 | 2026-05-07 | 15:46 PM | 9,380 | - | - | 9,380 | 9,380 | NAAFCO User | Picked
+
+❌ "Bismillah" not found in any row.

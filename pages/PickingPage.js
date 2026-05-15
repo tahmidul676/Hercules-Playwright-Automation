@@ -167,74 +167,56 @@ exports.PickingPage = class PickingPage {
     await this.processBtn.click();
   }
 
-
-
   // ---------Apply filter to get data----------------
-// async selectOrderByOrderFrom(expectedOrderFrom) {
-//   const rows = this.page.locator("table tbody tr");
-//   const rowCount = await rows.count();
-//   let found = false;
 
-//   for (let i = 0; i < rowCount; i++) {
-//     const row = rows.nth(i);
-//     const cellText = await row.textContent();
-
-//     if (cellText.includes(expectedOrderFrom)) {
-//       await row.locator("input[type='checkbox']").check();
-//       found = true;
-//       break;
-//     }
-//   }
-
-//   return found; //just return, no expect here
-// }
-
-//------------
-async selectOrderByOrderFrom(expectedOrderFrom) {
-  // Wait until at least one td has real visible text (not empty/ZWNJ)
-  await this.page.waitForFunction(() => {
-    const cells = document.querySelectorAll("table tbody tr td");
-    return [...cells].some(
-      (td) => td.innerText.trim().replace(/\u200C/g, "").length > 0
+  async selectOrderByOrderFrom(expectedOrderFrom) {
+    // Wait until at least one td has real visible text (not empty/ZWNJ)
+    await this.page.waitForFunction(
+      () => {
+        const cells = document.querySelectorAll("table tbody tr td");
+        return [...cells].some(
+          (td) => td.innerText.trim().replace(/\u200C/g, "").length > 0,
+        );
+      },
+      { timeout: 15000 },
     );
-  }, { timeout: 15000 });
 
-  const rows = this.page.locator("table tbody tr");
-  const rowCount = await rows.count();
-  let found = false;
+    const rows = this.page.locator("table tbody tr");
+    const rowCount = await rows.count();
+    let found = false;
 
-  console.log(`Total rows: ${rowCount}`);
+    console.log(`Total rows: ${rowCount}`);
 
-  for (let i = 0; i < rowCount; i++) {
-    const row = rows.nth(i);
-    const cells = row.locator("td");
-    const totalCells = await cells.count();
+    for (let i = 0; i < rowCount; i++) {
+      const row = rows.nth(i);
+      const cells = row.locator("td");
+      const totalCells = await cells.count();
 
-    if (totalCells === 0) continue;
+      if (totalCells === 0) continue;
 
-    // Read ALL cells text and clean ZWNJ characters
-    let rowText = "";
-    for (let c = 0; c < totalCells; c++) {
-      const raw = await cells.nth(c).evaluate(
-        (el) => el.innerText.trim().replace(/\u200C/g, "")
-      );
-      console.log(`  Row[${i}] Col[${c}]: "${raw}"`);
-      rowText += raw + " ";
+      // Read ALL cells text and clean ZWNJ characters
+      let rowText = "";
+      for (let c = 0; c < totalCells; c++) {
+        const raw = await cells
+          .nth(c)
+          .evaluate((el) => el.innerText.trim().replace(/\u200C/g, ""));
+        console.log(`  Row[${i}] Col[${c}]: "${raw}"`);
+        rowText += raw + " ";
+      }
+
+      if (rowText.includes(expectedOrderFrom.trim())) {
+        await this.page.evaluate((index) => {
+          const rows = document.querySelectorAll("table tbody tr");
+          const checkbox = rows[index]?.querySelector("input[type='checkbox']");
+          if (checkbox) checkbox.click();
+        }, i);
+
+        found = true;
+        break;
+      }
     }
 
-    if (rowText.includes(expectedOrderFrom.trim())) {
-      await this.page.evaluate((index) => {
-        const rows = document.querySelectorAll("table tbody tr");
-        const checkbox = rows[index]?.querySelector("input[type='checkbox']");
-        if (checkbox) checkbox.click();
-      }, i);
-
-      found = true;
-      break;
-    }
+    return found;
   }
-
-  return found;
-}
-//---------------
+  //---------------
 };
