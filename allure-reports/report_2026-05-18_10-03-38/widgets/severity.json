@@ -1,0 +1,1 @@
+[{"uid":"49c830dddd1eeaaa","name":"SND_PI_Picking_CreateTest","time":{"start":1779076985392,"stop":1779076998655,"duration":13263},"status":"failed","severity":"normal"},{"uid":"f6c88e7b0c6a5933","name":"SND_PI_CollectionSummery_CreateTest","time":{"start":1779077003822,"stop":1779077017324,"duration":13502},"status":"passed","severity":"normal"}]

@@ -3,10 +3,18 @@
 const { execSync } = require("child_process");
 
 const tests = [
+<<<<<<< order
  // "tests/TC_010_SND_Order_ApprovalPendingOrderTest.spec.js",
   "tests/TC_011_SND_PI_CreateTest.spec.js",
    "tests/TC_014_SND_PI_Picking_CreateTest.spec.js",
    "tests/TC_016_SND_PI_CollectionSummery_CreateTest.spec.js",
+=======
+  // "tests/TC_010_SND_Order_ApprovalPendingOrderTest.spec.js",
+  //"tests/TC_011_SND_PI_CreateTest.spec.js",
+  "tests/TC_014_SND_PI_Picking_CreateTest.spec.js",
+  "tests/TC_016_SND_PI_CollectionSummery_CreateTest.spec.js",
+  
+>>>>>>> local
 ];
 
 let failedTests = [];

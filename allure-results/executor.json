@@ -2,6 +2,10 @@
   "name": "Local Machine",
   "type": "playwright",
   "buildName": "Hercules Automation",
+<<<<<<< order
   "buildOrder": 1778744937732,
+=======
+  "buildOrder": 1779076925069,
+>>>>>>> local
   "reportName": "Hercules Automation Report"
 }
