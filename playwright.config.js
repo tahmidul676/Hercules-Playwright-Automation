@@ -67,7 +67,7 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     screenshot: "only-on-failure",
     video: "retain-on-failure",
-    //trace: "on-first-retry",
+    trace: "retain-on-failure",
   },
 
   /* Configure projects for major browsers */
@@ -81,7 +81,8 @@ export default defineConfig({
       name: "chromium",
       use: {
         ...devices["Desktop Chrome"],
-        viewport: { width: 1920, height: 1080 },
+
+        //viewport: { width: 1920, height: 1080 },
         // storageState: "auth/user.json", // 👈 injected into every test
       },
       //  dependencies: ["setup"], // 👈 waits for setup to finish first

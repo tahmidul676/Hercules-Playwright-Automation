@@ -1,0 +1,79 @@
+❌ PIN: 11111 → PIN is invalid! | ❌ Invalid PIN: All digits cannot be the same (e.g., 11111).
+❌ PIN: 22222 → PIN is invalid! | ❌ Invalid PIN: All digits cannot be the same (e.g., 11111).
+❌ PIN: 33333 → PIN is invalid! | ❌ Invalid PIN: All digits cannot be the same (e.g., 11111).
+❌ PIN: 44444 → PIN is invalid! | ❌ Invalid PIN: All digits cannot be the same (e.g., 11111).
+❌ PIN: 55555 → PIN is invalid! | ❌ Invalid PIN: All digits cannot be the same (e.g., 11111).
+❌ PIN: 66666 → PIN is invalid! | ❌ Invalid PIN: All digits cannot be the same (e.g., 11111).
+❌ PIN: 77777 → PIN is invalid! | ❌ Invalid PIN: All digits cannot be the same (e.g., 11111).
+❌ PIN: 88888 → PIN is invalid! | ❌ Invalid PIN: All digits cannot be the same (e.g., 11111).
+❌ PIN: 99999 → PIN is invalid! | ❌ Invalid PIN: All digits cannot be the same (e.g., 11111).
+❌ PIN: 00000 → PIN is invalid! | ❌ Invalid PIN: PIN cannot start with '0'.
+❌ PIN: 12345 → PIN is invalid! | ❌ Invalid PIN: Sequential run of 4 or more consecutive digits (e.g., 1234x, 5432x) is not allowed.
+❌ PIN: 23456 → PIN is invalid! | ❌ Invalid PIN: Sequential run of 4 or more consecutive digits (e.g., 1234x, 5432x) is not allowed.
+❌ PIN: 34567 → PIN is invalid! | ❌ Invalid PIN: Sequential run of 4 or more consecutive digits (e.g., 1234x, 5432x) is not allowed.
+❌ PIN: 45678 → PIN is invalid! | ❌ Invalid PIN: Sequential run of 4 or more consecutive digits (e.g., 1234x, 5432x) is not allowed.
+❌ PIN: 56789 → PIN is invalid! | ❌ Invalid PIN: Sequential run of 4 or more consecutive digits (e.g., 1234x, 5432x) is not allowed.
+❌ PIN: 98765 → PIN is invalid! | ❌ Invalid PIN: Sequential run of 4 or more consecutive digits (e.g., 1234x, 5432x) is not allowed.
+❌ PIN: 87654 → PIN is invalid! | ❌ Invalid PIN: Sequential run of 4 or more consecutive digits (e.g., 1234x, 5432x) is not allowed.
+❌ PIN: 76543 → PIN is invalid! | ❌ Invalid PIN: Sequential run of 4 or more consecutive digits (e.g., 1234x, 5432x) is not allowed.
+❌ PIN: 65432 → PIN is invalid! | ❌ Invalid PIN: Sequential run of 4 or more consecutive digits (e.g., 1234x, 5432x) is not allowed.
+❌ PIN: 54321 → PIN is invalid! | ❌ Invalid PIN: Sequential run of 4 or more consecutive digits (e.g., 1234x, 5432x) is not allowed.
+❌ PIN: 12340 → PIN is invalid! | ❌ Invalid PIN: Sequential run of 4 or more consecutive digits (e.g., 1234x, 5432x) is not allowed.
+❌ PIN: 12341 → PIN is invalid! | ❌ Invalid PIN: Sequential run of 4 or more consecutive digits (e.g., 1234x, 5432x) is not allowed.
+❌ PIN: 12342 → PIN is invalid! | ❌ Invalid PIN: Sequential run of 4 or more consecutive digits (e.g., 1234x, 5432x) is not allowed.
+❌ PIN: 12343 → PIN is invalid! | ❌ Invalid PIN: Sequential run of 4 or more consecutive digits (e.g., 1234x, 5432x) is not allowed.
+❌ PIN: 12344 → PIN is invalid! | ❌ Invalid PIN: Sequential run of 4 or more consecutive digits (e.g., 1234x, 5432x) is not allowed.
+❌ PIN: 12346 → PIN is invalid! | ❌ Invalid PIN: Sequential run of 4 or more consecutive digits (e.g., 1234x, 5432x) is not allowed.
+❌ PIN: 12347 → PIN is invalid! | ❌ Invalid PIN: Sequential run of 4 or more consecutive digits (e.g., 1234x, 5432x) is not allowed.
+❌ PIN: 12348 → PIN is invalid! | ❌ Invalid PIN: Sequential run of 4 or more consecutive digits (e.g., 1234x, 5432x) is not allowed.
+❌ PIN: 12349 → PIN is invalid! | ❌ Invalid PIN: Sequential run of 4 or more consecutive digits (e.g., 1234x, 5432x) is not allowed.
+✅ PIN: 12350 → PIN is valid! | ✅ PIN is valid!
+❌ PIN: 11234 → PIN is invalid! | ❌ Invalid PIN: Sequential run of 4 or more consecutive digits (e.g., 1234x, 5432x) is not allowed.
+✅ PIN: 12235 → PIN is valid! | ✅ PIN is valid!
+✅ PIN: 12334 → PIN is valid! | ✅ PIN is valid!
+❌ PIN: 12344 → PIN is invalid! | ❌ Invalid PIN: Sequential run of 4 or more consecutive digits (e.g., 1234x, 5432x) is not allowed.
+❌ PIN: 43211 → PIN is invalid! | ❌ Invalid PIN: Sequential run of 4 or more consecutive digits (e.g., 1234x, 5432x) is not allowed.
+❌ PIN: 44321 → PIN is invalid! | ❌ Invalid PIN: Sequential run of 4 or more consecutive digits (e.g., 1234x, 5432x) is not allowed.
+✅ PIN: 43321 → PIN is valid! | ✅ PIN is valid!
+✅ PIN: 43221 → PIN is valid! | ✅ PIN is valid!
+❌ PIN: 12121 → PIN is invalid! | ❌ Invalid PIN: A digit cannot appear more than twice.
+❌ PIN: 21212 → PIN is invalid! | ❌ Invalid PIN: A digit cannot appear more than twice.
+❌ PIN: 12112 → PIN is invalid! | ❌ Invalid PIN: A digit cannot appear more than twice.
+❌ PIN: 21221 → PIN is invalid! | ❌ Invalid PIN: A digit cannot appear more than twice.
+❌ PIN: 10101 → PIN is invalid! | ❌ Invalid PIN: A digit cannot appear more than twice.
+❌ PIN: 11011 → PIN is invalid! | ❌ Invalid PIN: A digit cannot appear more than twice.
+❌ PIN: 10011 → PIN is invalid! | ❌ Invalid PIN: A digit cannot appear more than twice.
+❌ PIN: 11001 → PIN is invalid! | ❌ Invalid PIN: A digit cannot appear more than twice.
+❌ PIN: 12312 → PIN is invalid! | ❌ Invalid PIN: PIN follows a predictable weak pattern (e.g., all even, arithmetic progression, two‑pair).
+❌ PIN: 12123 → PIN is invalid! | ❌ Invalid PIN: Repetitive rhythmic patterns (e.g., 12121, 12312) are not allowed.
+❌ PIN: 11212 → PIN is invalid! | ❌ Invalid PIN: A digit cannot appear more than twice.
+❌ PIN: 13579 → PIN is invalid! | ❌ Invalid PIN: PIN follows a predictable weak pattern (e.g., all even, arithmetic progression, two‑pair).
+❌ PIN: 97531 → PIN is invalid! | ❌ Invalid PIN: PIN follows a predictable weak pattern (e.g., all even, arithmetic progression, two‑pair).
+❌ PIN: 24680 → PIN is invalid! | ❌ Invalid PIN: PIN follows a predictable weak pattern (e.g., all even, arithmetic progression, two‑pair).
+❌ PIN: 86420 → PIN is invalid! | ❌ Invalid PIN: PIN follows a predictable weak pattern (e.g., all even, arithmetic progression, two‑pair).
+✅ PIN: 11235 → PIN is valid! | ✅ PIN is valid!
+✅ PIN: 12358 → PIN is valid! | ✅ PIN is valid!
+❌ PIN: 19900 → PIN is invalid! | ❌ Invalid PIN: PIN follows a predictable weak pattern (e.g., all even, arithmetic progression, two‑pair).
+✅ PIN: 19950 → PIN is valid! | ✅ PIN is valid!
+✅ PIN: 19960 → PIN is valid! | ✅ PIN is valid!
+✅ PIN: 19970 → PIN is valid! | ✅ PIN is valid!
+✅ PIN: 19980 → PIN is valid! | ✅ PIN is valid!
+❌ PIN: 19990 → PIN is invalid! | ❌ Invalid PIN: A digit cannot appear more than twice.
+❌ PIN: 20000 → PIN is invalid! | ❌ Invalid PIN: A digit cannot appear more than twice.
+❌ PIN: 20010 → PIN is invalid! | ❌ Invalid PIN: A digit cannot appear more than twice.
+❌ PIN: 12321 → PIN is invalid! | ❌ Invalid PIN: Repetitive rhythmic patterns (e.g., 12121, 12312) are not allowed.
+❌ PIN: 12221 → PIN is invalid! | ❌ Invalid PIN: A digit cannot appear more than twice.
+❌ PIN: 12121 → PIN is invalid! | ❌ Invalid PIN: A digit cannot appear more than twice.
+❌ PIN: 10001 → PIN is invalid! | ❌ Invalid PIN: A digit cannot appear more than twice.
+❌ PIN: 11011 → PIN is invalid! | ❌ Invalid PIN: A digit cannot appear more than twice.
+❌ PIN: 10101 → PIN is invalid! | ❌ Invalid PIN: A digit cannot appear more than twice.
+❌ PIN: 23432 → PIN is invalid! | ❌ Invalid PIN: Repetitive rhythmic patterns (e.g., 12121, 12312) are not allowed.
+❌ PIN: 23232 → PIN is invalid! | ❌ Invalid PIN: A digit cannot appear more than twice.
+❌ PIN: 34543 → PIN is invalid! | ❌ Invalid PIN: Repetitive rhythmic patterns (e.g., 12121, 12312) are not allowed.
+
+========== SUMMARY ==========
+Total PINs Tested : 72
+✅ Valid PINs     : 11
+❌ Invalid PINs   : 61
+==============================
+
